@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ColorModel>
+
+<h3>Danh sách Màu</h3>
+
+@* <partial name="_NotificationPartial" /> *@
+
+<a asp-action="Create" asp-controller="Color" class="btn btn-primary btn-lg rounded-pill shadow"> + Thêm Màu sắc</a>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên Màu</th>
+            <th scope="col">Lựa chọn</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <th scope="row"></th>
+                    <td>@item.Name</td>
+                    <td>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm delete-link" asp-controller="Color" asp-route-Id="@item.Id">
+                            <i class="fas fa-trash"></i>
+                            &nbsp;
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

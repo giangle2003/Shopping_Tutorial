@@ -1,0 +1,224 @@
+﻿@{
+    ViewData["title"] = "Admin Area";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>@ViewData["title"] - ADMIN AREAS</title>
+	<link href="~/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/css/font-awesome.min.css" rel="stylesheet">
+	<link href="~/css/prettyPhoto.css" rel="stylesheet">
+	<link href="~/css/price-range.css" rel="stylesheet">
+	<link href="~/css/animate.css" rel="stylesheet">
+	<link href="~/css/main.css" rel="stylesheet">
+	<link href="~/css/responsive.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+
+</head><!--/head-->
+
+<body>
+
+	<header id="header">
+		<!--header-->
+		<div class="header_top">
+			<!--header_top-->
+			<div class="container">
+				<div class="row">
+				
+				</div>
+			</div>
+		</div><!--/header_top-->
+
+		<div class="header-middle">
+			<!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							
+
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div><!--/header-middle-->
+
+		<div class="header-bottom">
+			<!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a asp-area="/" asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+								
+								<li><a asp-controller="Product" asp-action="Index">Sản phẩm</a></li>
+								<li><a asp-controller="Category" asp-action="Index">Danh mục</a></li>
+								<li><a asp-controller="Brand" asp-action="Index">Thương Hiệu</a></li>
+								<li><a asp-controller="Slider" asp-action="Index">Slider</a></li>
+								<li><a asp-controller="Order" asp-action="Index">Đơn hàng</a></li>
+								<li><a asp-controller="User" asp-action="Index">Người dùng</a></li>
+								<li><a asp-controller="Role" asp-action="Index">Phân quyền</a></li>
+								<li><a asp-controller="Contact" asp-action="Index">Liên hệ</a></li>
+								<li><a asp-controller="Shipping" asp-action="Index">Phí ship</a></li>
+								<li><a asp-controller="Coupon" asp-action="Index">Giảm giá</a></li>
+								<li><a asp-controller="Color" asp-action="Index">Màu sắc</a></li>
+								<li><a asp-controller="Dashboard" asp-action="Index">Thống kê</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+
+	<section>
+		<div class="container">
+			<div class="row">
+				@* <partial name="_NotificationPartial" /> *@
+				@RenderBody()
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer">
+		<!--Footer-->
+
+
+
+	</footer><!--/Footer-->
+
+
+
+	<script src="~/js/jquery.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/jquery.scrollUp.min.js"></script>
+	<script src="~/js/price-range.js"></script>
+	<script src="~/js/jquery.prettyPhoto.js"></script>
+	<script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+	
+	<script src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.dataTables.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.print.min.js"></script>
+
+	<script src="~/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="~/backend/js/site.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+    <!-- Các script dưới đây sẽ được thêm từ các trang Razor -->
+	
+	<script>
+		$(document).ready(function(){
+			var message = '@TempData["success"]'.trim();
+			var message1 = '@Html.Raw(TempData["errorr"])'.trim();
+			console.log("TempData message: " + message); // Debug kiểm tra giá trị
+			console.log("TempData errorr: " + message1); // Debug kiểm tra giá trị
+
+			if (message !== '' && message !== 'null' && message !== 'undefined') {
+				Swal.fire({
+					title: message,
+					icon: "success",
+					timer: 2000
+				});
+				
+			}
+			// Hiển thị thông báo lỗi
+		if (message1 !== '' && message1 !== 'null' && message1 !== 'undefined') {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: message1,
+			});
+		}
+		});
+	</script>
+	<!-- Phân trang + in -->
+		<script>
+		$(document).ready(function () {
+			let table = $('#myTable').DataTable({
+				"columnDefs": [{
+					"targets": 0, // Cột số thứ tự (STT)
+					"render": function (data, type, row, meta) {
+						return meta.row + 1 + meta.settings._iDisplayStart; // STT tăng liên tục
+					}
+				}],
+				"pageLength": 10, // Mặc định hiển thị 10 sản phẩm mỗi trang
+				"lengthMenu": [5,10, 25, 50, 100], // Cho phép chọn số lượng sản phẩm hiển thị
+				"ordering": true, // Bật sắp xếp cột
+				"searching": true, // Bật tìm kiếm
+				"paging": true, // Bật phân trang
+				"language": { // Tùy chỉnh ngôn ngữ
+					"lengthMenu": "Hiển thị số sản phẩm _MENU_",
+					"zeroRecords": "Không tìm thấy dữ liệu",
+					"info": "Trang _PAGE_ trên _PAGES_",
+					"infoEmpty": "Không có dữ liệu",
+					"infoFiltered": "(lọc từ _MAX_ mục)",
+					"search": "Tìm kiếm:",					
+				},
+				layout: {
+				topStart: {
+					buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+				}
+			}
+			});
+		});		
+	</script>	
+	
+	@await RenderSectionAsync("Scripts", required: false)
+	
+</body>
+</html>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		// Khi trang load lại, lấy vị trí scroll từ localStorage
+		if (localStorage.getItem("scrollPosition")) {
+			window.scrollTo(0, localStorage.getItem("scrollPosition"));
+		}
+
+		// Trước khi rời trang, lưu vị trí scroll
+		window.addEventListener("beforeunload", function () {
+			localStorage.setItem("scrollPosition", window.scrollY);
+		});
+	});
+</script>

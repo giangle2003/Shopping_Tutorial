@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ProductModel>
+@{
+    ViewData["title"] = "Product Listed";
+    
+}
+<h3>Danh sách sản phẩm</h3>
+
+
+<a asp-action="Create" asp-controller="Product" class="btn btn-primary btn-lg rounded-pill shadow"> + Thêm sản phẩm</a>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Đã bán</th>
+            @* <th scope="col">Mô tả</th> *@
+            <th scope="col">Giá nhập</th>
+            <th scope="col">Giá gốc</th>
+            <th scope="col">Giá bán</th>
+            <th scope="col">Hình ảnh</th>
+            @* <th scope="col">Đường dẫn</th> *@
+            <th scope="col">Danh mục</th>
+            <th scope="col">Thương hiệu</th>
+            <th scope="col">Màu sắc</th>
+            <th scope="col">Lựa chọn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row"></th>
+                <td>@item.Name</td>
+                <td>
+                    <b>@item.Quantity</b>
+                    <br/>
+                    @* <form method="post" asp-action="UpdateProductQuantity">  *@
+                    @*      <button type="submit" class="btn btn-primary">Cập nhật số lượng</button>  *@
+                    @*  </form> *@
+                </td>
+                <td>
+                    <b>@item.Sold</b>
+                    <br />                    
+                </td>
+                @* <td>@Html.Raw(@item.Description)</td> *@
+                <td>@item.ImportPrice.ToString("#,##0 VNĐ")</td>
+                <td>@item.OriginalPrice.ToString("#,##0 VNĐ")</td>
+                <td>@item.Price.ToString("#,##0 VNĐ")</td>
+                <td><img src="~/media/products/@item.Image" width="170px", height="200px"/></td>
+                @* <td>@item.Slug</td> *@
+                <td>@item.Category.Name</td>
+                <td>@item.Brand.Name</td>
+                <td>
+                    @if (item.ProductColors != null && item.ProductColors.Any())
+                    {
+                        <ul>
+                            @foreach (var pc in item.ProductColors)
+                            {
+                                <li>
+                                    @pc.Color.Name
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Chưa có màu</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="AddColor" asp-controller="Product" asp-route-Id="@item.Id" class="btn btn-info btn-sm">
+                        <i class="fas fa-paint-brush"></i>
+                        &nbsp;Màu sắc
+                    </a>
+                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="Product" asp-route-Id="@item.Id">
+                        <i class="fas fa-pencil-alt"></i>
+                        &nbsp;
+                        Edit
+                    </a>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm delete-link" asp-controller="Product" asp-route-Id="@item.Id">
+                        <i class="fas fa-trash"></i>
+                        &nbsp;
+                        Xóa
+                    </a>
+                </td>
+            </tr>
+        }
+
+   
+    </tbody>
+</table>

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<OrderDetails>
+
+@{
+    ViewData["Title"] = "Chi tiết Sản phẩm";
+    int stt = 1;
+    decimal total = 0; // Tổng giá trị đơn hàng
+    decimal subtotal = 0;
+
+}
+
+<div class="container mt-5" style="padding-bottom: 15px">
+    <h3 class="mb-4 text-center">Chi tiết Sản phẩm</h3>
+    <hr>
+
+    <div class="card shadow-lg">
+        <div class="card-body">
+
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col" class="text-center">STT</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col" class="text-right">Giá sản phẩm</th>
+                        <th scope="col" class="text-center">Số lượng</th>
+                        <th scope="col" class="text-right">Tổng giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        subtotal = item.Price * item.Quantity;
+                        total += subtotal;
+                        <tr>
+                            <td class="text-center">@stt</td>
+                            <td>@item.Product.Name</td>
+                            <td class="text-right">@item.Price.ToString("#,##0 VNĐ")</td>
+                            <td class="text-center">@item.Quantity</td>
+                            <td class="text-right">@subtotal.ToString("#,##0 VNĐ")</td>
+                        </tr>
+                        stt++;
+                    }
+                    <tr class="fw-bold">
+                        <td colspan="3" class="text-end">Phí ship:</td>
+                        <td class="text-right">@ViewBag.ShippingCost.ToString("#,##0 VNĐ")</td>
+                        <td></td>
+                    </tr>
+                    <tr class="fw-bold">
+                        <td colspan="3" class="text-end">Giảm giá:</td>
+                        <td class="text-right">@ViewBag.Discount.ToString("#,##0 VNĐ")</td>
+                        <td></td>
+                    </tr>
+                    <tr class="fw-bold">
+                        <td colspan="3" class="text-end">Thanh toán:</td>
+                        <td class="text-right">
+                            @((total + Convert.ToDecimal(ViewBag.ShippingCost ?? 0) + ViewBag.Discount).ToString("#,##0 VNĐ"))
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="pull-right mt-4">
+        <a href="javascript:history.back()" class="btn btn-primary">Địa chỉ giao hàng</a>
+        <a href="@Url.Action("History", "Account", new {status=1})" class="btn btn-primary mt-4">Quay lại danh sách</a>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán thất bại";
+}
+
+<div class="container text-center mt-5" style="padding: 20px">
+    <div class="panel panel-danger shadow-lg p-4 border-0 rounded-4" style="max-width: 600px; margin: auto;">
+        <div class="panel-body">
+            <i class="fa fa-times-circle text-danger" style="font-size: 4rem; border: 3px solid red; border-radius: 50%; padding: 15px;"></i>
+            <h2 class="text-danger mt-3">❌ Thanh toán thất bại! ❌</h2>
+            <p class="text-muted">Đã có lỗi xảy ra khi xử lý thanh toán. Vui lòng thử lại.</p>
+            <div class="mt-4">
+                <a asp-controller="Cart" asp-action="Index" class="btn btn-warning btn-lg rounded-pill shadow hover-effect">
+                    <i class="fa fa-refresh"></i> Thử lại
+                </a>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary btn-lg rounded-pill shadow hover-effect ms-2">
+                    <i class="fa fa-home"></i> Quay về trang chủ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .panel {
+        animation: fadeInDown 0.8s ease-in-out;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    @@keyframes fadeInDown {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    .hover-effect:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+</style>

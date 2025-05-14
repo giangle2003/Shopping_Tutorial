@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Giao dịch thất bại";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .fail-container {
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .fail-icon {
+        font-size: 100px;
+        color: #e74c3c;
+    }
+    .fail-message {
+        font-size: 28px;
+        margin-top: 20px;
+        color: #333;
+    }
+    .fail-description {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #777;
+    }
+    .btn-return {
+        margin-top: 30px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .btn-return:hover {
+        background-color: #c0392b;
+    }
+</style>
+
+<div class="fail-container">
+    <div class="fail-icon">😞</div>
+    <div class="fail-message">@ViewBag.Message</div>
+    <div class="fail-description">Bạn sẽ được chuyển về giỏ hàng sau <span id="countdown">3</span> giây...</div>
+
+    <a asp-controller="Cart" asp-action="Index" class="btn-return">Quay về giỏ hàng ngay</a>
+</div>
+
+<script>
+    var seconds = 3;
+    var countdown = document.getElementById('countdown');
+
+    setInterval(function() {
+        seconds--;
+        if (seconds >= 0) {
+            countdown.innerText = seconds;
+        }
+        if (seconds === 0) {
+            window.location.href = '/Cart/Index';
+        }
+    }, 1000);
+</script>

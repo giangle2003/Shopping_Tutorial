@@ -1,0 +1,125 @@
+﻿@model IEnumerable<ProductModel>
+@{
+	ViewData["Title"] = "Web bán hàng ASP.NET8";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	Paginate pager = new Paginate();
+
+	int pageNo = 0;
+
+	if (ViewBag.Pager != null)
+	{
+		pager = ViewBag.Pager;
+
+		pageNo = pager.CurrentPage;
+	}
+}
+
+<div class="col-sm-3">
+	@Html.Partial("_SideBarPartial")
+</div>
+
+<div class="col-sm-9 padding-right">
+	<div class="features_items">
+		@if (ViewBag.Count > 0)
+		{
+			<partial name="_FilterProductPartial" />
+		}
+		<!--features_items-->
+		<h2 class="title text-center">@ViewBag.Slug</h2>
+
+		@foreach (var item in Model)
+		{
+			<div class="col-sm-4">
+				<div class="product-image-wrapper">
+					<a>
+						<div class="single-products">
+							<div class="productinfo text-center">
+								<a asp-action="Details" asp-controller="Product" asp-route-Id="@item.Id">
+									<img src="~/media/products/@item.Image" alt="@item.Name" width="100px" height="200px" />
+									<h2>@item.Price.ToString("#,##0 VNĐ")</h2>
+									<p>@item.Name</p>
+									<p>Danh mục: @item.Category.Name</p>
+									<p>Thương hiệu : @item.Brand.Name</p>
+                                    @if (item.Quantity > 0)
+                                    {
+										<a class="btn btn-primary" asp-action="Details" asp-controller="Product" asp-route-Id="@item.Id">
+											Chi tiết sản phẩm
+										</a>
+									}
+                                    else
+                                    {
+                                        <button class="btn btn-default " disabled><i class="fa fa-shopping-cart"></i>Hết hàng</button>
+                                    }
+								</a>
+							</div>
+
+							@* Hiệu ứng động *@
+							@* 	<div class="product-overlay">
+							<div class="overlay-content">
+								<img src="~/images/@item.Image" alt="@item.Name" width="100%" />
+								<h2>@item.Price</h2>
+								<p>@item.Name</p>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+							</div>
+						</div> *@
+						</div>
+					</a>
+					<div class="choose">
+						@if (User.Identity?.IsAuthenticated ?? false)
+						{
+							<ul class="nav nav-pills nav-justified">
+								<li><a style="cursor:pointer" class="add-btn-wishlist" data-product_id="@item.Id"><i class="fa fa-plus-square "></i>Thêm yêu thích</a></li>
+								<li><a style="cursor:pointer" class="add-btn-compare" data-product_id="@item.Id"><i class="fa fa-plus-square"></i>Thêm so sánh</a></li>
+							</ul>
+						}
+					</div>
+				</div>
+			</div>
+		}
+	</div><!--features_items-->
+	<partial name="_Paging" model="@pager" />
+
+</div>
+
+@section Scripts {
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const sortSelect = document.getElementById("sort_by");
+
+			sortSelect.addEventListener("change", function () {
+				const selectedSort = this.value;
+				const urlParams = new URLSearchParams(window.location.search);
+
+				// Gán hoặc xóa sort_by
+				if (selectedSort) {
+					urlParams.set("sort_by", selectedSort);
+				} else {
+					urlParams.delete("sort_by");
+				}
+
+				// Giữ lại các checkbox đã chọn (price_filter)
+				const checkboxes = document.querySelectorAll('input[name="price_filter"]:checked');
+				urlParams.delete("price_filter");
+				checkboxes.forEach(cb => {
+					urlParams.append("price_filter", cb.value);
+				});
+
+				// Giữ lại Slug nếu có
+				const slug = '@ViewBag.Slug';
+				if (slug) {
+					urlParams.set("Slug", slug);
+				}
+
+				// Redirect với query string mới
+				window.location.href = window.location.pathname + "?" + urlParams.toString();
+			});
+		});
+	</script>
+	<script>
+		document.getElementById("stock_status").addEventListener("change", function () {
+			this.form.submit();
+		});
+	</script>
+
+}

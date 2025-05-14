@@ -1,0 +1,84 @@
+﻿@model ProductQuantityModel
+@{
+    ViewData["title"] = "Create Quantity";
+    decimal total_quantities = 0;
+    decimal key = 1;
+}
+<style>
+    .custom-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: #007bff;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .custom-back-btn:hover {
+            background: #0056b3;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+</style>
+
+<h4>Thêm mới số lượng</h4>
+<div class="col-9">
+    <form asp-action="StoreProductQuantity" asp-controller="Product" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="ProductId" value="@ViewBag.Id" />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label>Số lượng</label>
+            <input min="1" value="1" max="2000" asp-for="Quantity" class="form-control" />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>      
+        <div class="form-group">
+            <button class="btn btn-primary">
+                Thêm mới
+            </button>
+        </div>
+    </form>
+    <h3></h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Số lượng thêm</th>
+                <th>Ngày thêm</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var productQuantity in ViewBag.ProductByQuantity)
+            {
+                total_quantities += productQuantity.Quantity;
+                <tr>
+                    <td>@key</td>
+                    <td>@productQuantity.Quantity</td>
+
+                    <td>@productQuantity.DateCreated</td>
+                </tr>
+                key++;
+            }
+            <tr>
+                <td>Tổng số lượng : @total_quantities</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <a asp-action="Index" class="custom-back-btn"><i class="fa-solid fa-arrow-left"></i> Trở về trang Danh sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+

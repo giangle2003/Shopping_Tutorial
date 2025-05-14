@@ -1,0 +1,53 @@
+﻿@model AppUserModel
+@{
+    ViewData["Title"] = "Notification";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // hoặc bạn để mặc định
+}
+
+<style>
+    .page-body {
+        background-color: #f7f9fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .notify-box {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+    }
+
+        .notify-box i {
+            font-size: 50px;
+            color: #5cb85c;
+            margin-bottom: 20px;
+        }
+
+    .email {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .btn-home {
+        margin-top: 20px;
+    }
+</style>
+
+<div class="page-body">
+    <div class="notify-box">
+        <i class="glyphicon glyphicon-envelope"></i>
+        <h3>Vui lòng kiểm tra email <span class="email">@Model.Email</span> trong vòng 48 giờ.</h3>
+        <p>
+            Chúng tôi đã gửi một liên kết để bạn đặt lại mật khẩu của bạn.
+            Hãy kiểm tra hộp thư để xác minh rằng bạn là người đưa ra yêu cầu này.
+        </p>
+        <p>Nếu bạn không nhận được email, hãy kiểm tra thư mục spam hoặc thử lại.</p>
+        <a asp-action="Index" asp-controller="Home" class="btn btn-success btn-home">Quay về trang chủ</a>
+    </div>
+</div>

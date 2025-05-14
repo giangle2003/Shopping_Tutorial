@@ -1,0 +1,165 @@
+﻿@model StatisticalModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="row">
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <h5>Thống kê số lượng</h5>
+            <ul>
+                <li>Tổng đơn hàng : @ViewBag.CountProduct</li>
+                <li>Tổng sản phẩm : @ViewBag.CountProduct</li>
+                <li>Tổng danh mục sản phẩm : @ViewBag.CountCategory</li>
+                <li>Tổng khách hàng : @ViewBag.CountUser</li>
+            </ul>
+        </div>        
+        <div class="row">
+            <div class="col-md-6">
+
+                <h5>Lọc dữ liệu theo thời gian</h5>
+                <select class="filter-select">
+                    <option value="">---Lọc dữ liệu---</option>
+                    <option value="7">7 ngày</option>
+                    <option value="30">30 ngày</option>
+                    <option value="90">90 ngày</option>
+                    <option value="180">180 ngày</option>
+                    <option value="365">365 ngày</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <h4>Tùy chọn: </h4>
+                <label>Từ ngày</label>
+                <input type="date" id="date_from" class="form-control" asp-for="@Model.DateCreated">
+                <label>Đến ngày</label>
+                <input type="date" id="date_to" class="form-control" asp-for="@Model.DateCreated">
+                <button id="filterButton" class="btn btn-primary">Lọc</button>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Biểu đồ thống kê</h4>
+            <div id="myfirstchart" style="height: 250px;"></div>
+        </div>
+        
+    </div>
+</div>
+@section Scripts {
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+           var ChartMorris = new Morris.Line({
+                        element: 'myfirstchart',
+                        data: [],
+                        xkey: 'date',
+                      
+                        ykeys: ['sold', 'quantity', 'revenue', 'profit'],
+                        labels: ['Đơn hàng', 'Số lượng bán ra', 'Doanh thu', 'Lợi nhuận'],
+                        lineColors: ['#0b62a4', '#7a92a3', '#4da74d', '#edc240'],
+                        resize: true
+                    });
+
+            //filter all data chart
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("GetChartData", "Dashboard")",
+                dataType: "json",
+                success: function (data) {
+                        console.log("Dữ liệu từ server:", data); // <--- Thêm dòng này
+
+                    if(data){
+                        ChartMorris.setData(data.map(function (item) {
+                            return {
+                                date: item.date,
+                                sold: item.sold,
+                                quantity :item.quantity,
+                                revenue: item.revenue,
+                                profit : item.profit
+                            };
+                        }));          
+                    }
+                    else{
+                        console.error("Không có dữ liệu");
+                        ChartMorris.setData([]);
+                    }
+                },
+                error: function (error) {
+                    console.error("Lỗi:",error);
+                }
+            });
+            $('.filter-select').on('change', function(){
+                var days = $(this).val(); // lấy giá trị số ngày từ select
+                var endDate = new Date(); //ngày hiện tại
+                var startDate = new Date(endDate.getTime() - days *24*60*60*1000); //ngày bắt đầu
+                // alert("Ngày bắt đầu: " + startDate + "\nNgày kết thúc: " + endDate);
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("GetChartDataBySelect", "Dashboard")",
+                    data: {
+                        startDate: startDate.toISOString().split('T')[0],
+                        endDate: endDate.toISOString().split('T')[0]
+                    },
+                    success: function (data) {
+                        if(data){
+                            ChartMorris.setData(data.map(function (item) {
+                                return {
+                                    date: item.date,
+                                    sold: item.sold,
+                                    quantity :item.quantity,
+                                    revenue: item.revenue,
+                                    profit : item.profit
+                                };
+                            }));
+                        }
+                        else{
+                            console.error("Không có dữ liệu");
+                            ChartMorris.setData([]);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("Lỗi:",error);
+                    }
+                });
+            });
+
+            //Lọc theo khoảng ngày được chọn
+            $('#filterButton').click(function(){
+                var fromDate = $("#date_from").val(); 
+                var toDate = $("#date_to").val(); 
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("FilterData", "Dashboard")",
+                    data: {
+                        fromDate: fromDate,
+                        toDate: toDate
+                    },
+                    success: function (data) {
+                        if(data){
+                            ChartMorris.setData(data.map(function (item) {
+                                return {
+                                    date: item.date,
+                                    sold: item.sold,
+                                    quantity :item.quantity,
+                                    revenue: item.revenue,
+                                    profit : item.profit
+                                };
+                            }));
+                        }
+                        else{
+                            console.error("Không có dữ liệu");
+                            ChartMorris.setData([]);
+                        }
+                    },
+                    error: function (error) {
+                        console.error("Lỗi:",error);
+                    }
+                });
+            });
+        });
+                
+    </script>
+    
+}

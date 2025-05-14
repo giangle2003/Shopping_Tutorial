@@ -1,0 +1,77 @@
+﻿
+<style>
+    /* Thiết kế thông báo giống hình */
+    .notification {
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        background-color: #34A853;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+    }
+    /* Success: Màu xanh */
+    .notification-success {
+        background-color: #34A853;
+    }
+
+    /* Danger: Màu đỏ */
+    .notification-danger {
+        background-color: #D93025;
+    }
+
+    /* Hiệu ứng khi ẩn thông báo */
+    .notification.hide-alert {
+        opacity: 0;
+        top: 5%;
+    }
+
+    /* Biểu tượng dấu check */
+    .notification i {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+</style>
+if (TempData["success"] != null)
+{
+    <div class="alert alert-success notification notification-success" id="success-alert">
+        <i class="fa fa-check-circle"></i>
+        @TempData["success"]
+    </div>
+}
+@if (TempData["errorr"] != null)
+{
+    <div class="alert alert-danger notification notification-danger" id="error-alert">
+        <i class="fa fa-times-circle"></i>
+        @TempData["errorr"]
+    </div>
+}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Tự động ẩn thông báo sau 3 giây
+        setTimeout(function () {
+            let successAlert = document.getElementById("success-alert");
+            let errorAlert = document.getElementById("error-alert");
+
+            if (successAlert) {
+                successAlert.style.animation = "fadeOut 0.5s ease-in-out";
+                setTimeout(() => successAlert.remove(), 500);
+            }
+
+            if (errorAlert) {
+                errorAlert.style.animation = "fadeOut 0.5s ease-in-out";
+                setTimeout(() => errorAlert.remove(), 500);
+            }
+        }, 3000);
+    });
+</script>

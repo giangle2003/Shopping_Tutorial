@@ -1,0 +1,12 @@
+﻿@using Shopping_Tutorial.Models.Momo
+@model MomoExecuteResponseModel
+
+@{
+    ViewData["Title"] = "Kết quả thông báo giao dịch thành công";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h5>Thanh toán MOMO thành công với :</h5>
+<h6>OrderId: @Model.OrderId</h6>
+<h6>OrderInfor: @Model.OrderInfo</h6>
+<h6>Tổng tiền: @Model.Amount</h6>
+<h5>Xem <a asp-action="History" asp-controller="Account">lịch sử đơn hàng</a> tại đây!</h5>

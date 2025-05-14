@@ -1,0 +1,72 @@
+﻿@model OrderModel
+
+@{
+    ViewData["Title"] = "Thông tin Đơn hàng";
+}
+
+<div class="container mt-5" style="padding-bottom: 15px">
+    <h3 class="mb-4 text-center">Thông tin Đơn hàng</h3>
+
+    <div class="container mt-5">
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2" class="text-center"><h4>Địa chỉ nhận hàng</h4></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Mã đơn hàng:</th>
+                            <td>@Model.OrderCode</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tên người nhận:</th>
+                            <td>@Model.UserName</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Địa chỉ giao hàng:</th>
+                            <td>@Model.ShippingAddress</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ngày tạo đơn hàng:</th>
+                            <td>@Model.CreatedDate.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Trạng thái:</th>
+                            <td>
+                                @if (Model.Status == 1)
+                                {
+                                    <span class="badge bg-warning">Chờ xác nhận</span>
+                                }
+                                else if (Model.Status == 0)
+                                {
+                                    <span class="badge bg-primary">Chờ xử lý</span>
+                                }
+                                else if (Model.Status == 2)
+                                {
+                                    <span class="badge bg-info">Đang giao hàng</span>
+                                }
+                                else if (Model.Status == 3)
+                                {
+                                    <span class="badge bg-danger">Đã hủy</span>
+                                }
+                                else if (Model.Status == 4)
+                                {
+                                    <span class="badge bg-success">Đã nhận</span>
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="pull-right mt-4">
+        <a href="@Url.Action("ProductDetails", "Account", new { orderCode = Model.OrderCode })" class="btn btn-primary">Chi tiết sản phẩm</a>
+        <a href="@Url.Action("History", "Account", new {status=1})" class="btn btn-primary mt-4">Quay lại danh sách</a>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿@model LoginViewModel
+@{
+    ViewData["title"] = "Login";
+}
+
+
+<section id=""> 
+	<!--form-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-sm-offset-1">
+				<div class="login-form"> 
+					<!--login form-->
+					<p style="font-size: 28px; font-weight: bold; color: #333; text-align: center; margin-bottom: 20px;">
+						Xin chào! Sẵn sàng khám phá nào? Đăng nhập ngay!
+					</p>
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<form asp-action="Login" asp-controller="Account">
+						<div class="form-group">
+							<label>Tên đăng nhập</label>
+							<input asp-for="Username" class="form-control" />
+							<span asp-validation-for="Username" class="text-danger"></span>
+						</div>					
+						<div class="form-group">
+							<label>Mật khẩu</label>
+							<div class="input-group">
+								<input asp-for="Password" class="form-control" id="passwordInput" type="password" />
+								<span class="input-group-addon" onclick="togglePassword()" style="cursor: pointer;">
+									<i id="eyeIcon" class="fa fa-eye"></i>
+								</span>
+							</div>
+							<span asp-validation-for="Password" class="text-danger"></span>
+						</div>
+						<span>
+							<input type="checkbox" class="checkbox">
+							Keep me signed in
+						</span>
+						<button type="submit" class="btn btn-default" style="margin-right: 100px">Đăng nhập</button>
+						
+						<p style="margin-top: 10px;">
+							Bạn chưa phải thành viên?
+							<a asp-action="Create" asp-controller="Account">
+								Đăng kí ngay →
+							</a>
+						</p>
+						<a asp-action="ForgotPass" asp-controller="Account">
+							Quên mật khẩu
+						</a>
+						<br/>
+						<a asp-action="LoginByGoogle" asp-controller="Account">
+							<i class="fab fa-google"></i> Đăng nhập với Google
+						</a>
+					</form>
+					<partial name="_NotificationPartial" />
+				</div><!--/login form-->
+			</div>
+		
+		</div>
+	</div>
+</section><!--/form-->
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
+
+<script>
+	// Toggle hiển thị mật khẩu
+	function togglePassword() {
+		var passwordInput = document.getElementById("passwordInput");
+		var eyeIcon = document.getElementById("eyeIcon");
+
+		if (passwordInput.type === "password") {
+			passwordInput.type = "text";
+			eyeIcon.classList.remove("fa-eye");
+			eyeIcon.classList.add("fa-eye-slash");
+		} else {
+			passwordInput.type = "password";
+			eyeIcon.classList.remove("fa-eye-slash");
+			eyeIcon.classList.add("fa-eye");
+		}
+	}
+</script>

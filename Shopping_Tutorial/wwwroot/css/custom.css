@@ -1,0 +1,16 @@
+﻿/* Cố định chiều cao cho sản phẩm */
+.product-image-wrapper {
+    height: 520px; /* hoặc tùy theo em cần */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #f7f7f5;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+    .product-image-wrapper:hover {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }

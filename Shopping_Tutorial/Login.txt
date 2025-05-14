@@ -1,0 +1,6 @@
+﻿Pass: 2204Giang
+Sử dụng bootrap 3 
+Sử dụng databse js để lưu trữ thông tin người dùng
+
+
+Pass Momo test: 123456

@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["title"] = "Danh sách người dùng";
+}
+<h3>Danh sách Người dùng</h3>
+
+
+<a asp-action="Create" asp-controller="User" class="btn btn-primary btn-lg rounded-pill shadow"> + Thêm người dùng</a>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên người dùng</th>
+            <th scope="col">Email</th>
+            @* <th scope="col">Mật khẩu</th> *@
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Phân quyền</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usersWithRoles in Model)
+        {
+            <tr>
+                <th scope="row"></th>
+                <td>@usersWithRoles.User.UserName</td>
+                <td>@usersWithRoles.User.Email</td>
+                @* <td>@usersWithRoles.User.PasswordHash</td> *@
+                <td>@usersWithRoles.User.PhoneNumber</td>
+                <td>@usersWithRoles.RoleName</td>
+                <td>
+                    @if (usersWithRoles.User.Id != ViewBag.loggedInUserId)
+                    {
+                        @if (usersWithRoles.RoleName != "Admin")
+                        {
+                            <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="User" asp-route-Id="@usersWithRoles.User.Id">
+                                <i class="fas fa-pencil-alt"></i>
+                                &nbsp;
+                                Edit
+                            </a>
+                            <a asp-action="Delete" class="btn btn-danger btn-sm delete-link" asp-controller="User" asp-route-Id="@usersWithRoles.User.Id">
+                                <i class="fas fa-trash"></i>
+                                &nbsp;
+                                Delete
+                            </a>
+                        }
+                        
+                    }
+                    
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

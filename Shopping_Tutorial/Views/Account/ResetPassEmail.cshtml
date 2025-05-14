@@ -1,0 +1,23 @@
+﻿@model AppUserModel
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi mật khẩu</title>
+</head>
+<body>
+    <p>Chào @Model.UserName,</p>
+    <p>Chúng tôi nhận được yêu cầu thay đổi mật khẩu từ địa chỉ email của bạn. </p>
+    <p>Để bắt đầu quá trình đặt lại mật khẩu cho Tài khoản @Model.Email của bạn, hãy nhấp vào liên kết bên dưới:</p>
+    <p>
+        {{ResetLinkHtml}}
+    </p>
+    <p>Nếu liên kết không hoạt động khi nhấp vào, hãy sao chép và dán URL vào cửa sổ trình duyệt mới.</p>
+    <p>Nếu bạn nhận được thư này do nhầm lẫn, có thể do một người dùng khác đã nhập nhầm địa chỉ email của bạn trong khi 
+        cố gắng thay đổi mật khẩu của họ. Trong trường hợp này, bạn không cần thực hiện bất kỳ hành động nào và có thể yên tâm bỏ qua email này.
+    </p>
+    <p>Trân trọng,</p>
+    <p>Đội ngũ hỗ trợ</p>
+</body>
+</html>

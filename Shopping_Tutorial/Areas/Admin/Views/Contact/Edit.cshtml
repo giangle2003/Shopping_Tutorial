@@ -1,0 +1,134 @@
+﻿@model ContactModel
+@{
+    ViewData["title"] = "Edit Liên hệ";
+}
+<style>
+    .custom-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: #007bff;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .custom-back-btn:hover {
+            background: #0056b3;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+</style>
+
+
+<h3>Edit Liên hệ</h3>
+
+<div class="col-md-9">
+    <form asp-action="Edit" asp-controller="Contact" method="post" enctype="multipart/form-data">
+
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div asp-for="Id" type="hidden"></div>
+        <div class="form-group">
+            <label>Tên</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Số điện thoại</label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Map</label>
+            <textarea asp-for="Map" class="form-control"> </textarea>
+            <span asp-validation-for="Map" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Mô tả</label>
+            <textarea asp-for="Description" class="form-control"> </textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Hình ảnh</label>
+            <input asp-for="ImageUpload" class="form-control" type="file" id="imageInput" onchange="previewImage(event)" />
+            <!-- Hiển thị tên file ảnh hiện tại -->
+            <input type="text" id="imageName" class="form-control mt-2" value="@ViewBag.CurrentImageName" readonly />
+            <span asp-validation-for="ImageUpload" class="text-danger"></span>
+            <!-- Hiển thị ảnh cũ nếu có -->
+            @if (!string.IsNullOrEmpty(ViewBag.CurrentImageName))
+            {
+                <img id="currentImage" src="~/media/logo/@ViewBag.CurrentImageName" width="170px" height="200px" />
+            }
+
+            <!-- Ảnh xem trước (chỉ hiển thị khi chọn ảnh mới) -->
+            <img id="preview" src="#" alt="Xem trước ảnh" style="max-width: 200px; display: none; margin-top: 10px; border: 1px solid #ddd; padding: 5px; border-radius: 5px;" />
+        </div>
+        <img id="preview" src="#" alt="Xem trước ảnh" style="max-width: 200px; display: none; margin-top: 10px; border: 1px solid #ddd; padding: 5px; border-radius: 5px;" />
+
+
+        <div class="form-group">
+            <button class="btn btn-primary">
+                Sửa
+            </button>
+        </div>
+
+    </form>
+    <a asp-action="Index" class="custom-back-btn"><i class="fa-solid fa-arrow-left"></i> Trở về trang Danh sách</a>
+</div>
+
+
+<script>
+    function previewImage(event) {
+        var input = event.target;
+        var preview = document.getElementById("preview");
+        var imageNameInput = document.getElementById("imageName");
+        var currentImage = document.getElementById("currentImage");
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = "block";
+
+                // Ẩn ảnh cũ khi có ảnh mới
+                if (currentImage) {
+                    currentImage.style.display = "none";
+                }
+            };
+            reader.readAsDataURL(input.files[0]);
+
+            // Cập nhật tên file ảnh mới vào ô input
+            imageNameInput.value = input.files[0].name;
+        } else {
+            // Nếu không có ảnh mới, ẩn ảnh xem trước
+            preview.style.display = "none";
+        }
+    }
+</script>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+        <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('Description');
+        </script>
+}

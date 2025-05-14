@@ -1,0 +1,120 @@
+﻿@{
+    var selectedPrices = (ViewBag.SelectedPrices as string[]) ?? new string[0];
+    string sortKey = ViewBag.sort_key as string ?? "";
+    var stockStatus = Context.Request.Query["stock_status"].ToString();
+
+}
+<div class="container">
+    <form method="get" asp-action="Index">
+        <input type="hidden" name="Slug" value="@ViewBag.Slug" />
+
+            <div class="row">
+
+             <div class="col-md-3">
+             <div class="panel panel-default">
+                <!-- Sort -->
+                    <div class="panel-heading"><h5>Sắp xếp theo</h5></div>
+                    <div class="panel-body">
+                        <select class="form-control" id="sort_by" name="sort_by">
+                            <option value="">---------</option>
+
+                            @if (sortKey == "price_increase")
+                            {
+                                <option value="price_increase" selected>Giá tăng dần</option>
+                            }
+                            else
+                            {
+                                <option value="price_increase">Giá tăng dần</option>
+                            }
+
+                            @if (sortKey == "price_decrease")
+                            {
+                                <option value="price_decrease" selected>Giá giảm dần</option>
+                            }
+                            else
+                            {
+                                <option value="price_decrease">Giá giảm dần</option>
+                            }
+
+                            @if (sortKey == "price_newest")
+                            {
+                                <option value="price_newest" selected>Mới nhất</option>
+                            }
+                            else
+                            {
+                                <option value="price_newest">Mới nhất</option>
+                            }
+
+                            @if (sortKey == "price_oldest")
+                            {
+                                <option value="price_oldest" selected>Cũ nhất</option>
+                            }
+                            else
+                            {
+                                <option value="price_oldest">Cũ nhất</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+                <!-- Filter by price -->
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><strong>Lọc theo giá</strong></div>
+                    <div class="panel-body">
+                        <div style="line-height: 1.8;">
+                            <input type="checkbox" name="price_filter" value="0-1000" @(selectedPrices.Contains("0-1000") ? "checked" : "") /> Dưới 10 triệu<br />
+                             <input type="checkbox" name="price_filter" value="1000-1500" @(selectedPrices.Contains("1000-1500") ? "checked" : "") /> 10 - 15 triệu<br />
+                             <input type="checkbox" name="price_filter" value="1500-2000" @(selectedPrices.Contains("1500-2000") ? "checked" : "") /> 15 - 20 triệu<br />
+                             <input type="checkbox" name="price_filter" value="2000-2500" @(selectedPrices.Contains("2000-2500") ? "checked" : "") /> 20 - 25 triệu<br />
+                             <input type="checkbox" name="price_filter" value="2500+" @(selectedPrices.Contains("2500+") ? "checked" : "") /> Lớn hơn 25 triệu<br />
+                         </div>
+                        <div class="text-center" style="margin-top: 15px;">
+                            <button type="submit" class="btn btn-success btn-sm" style="padding: 6px 20px; border-radius: 20px;font-size: 14px">
+                                Lọc
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Stock status -->
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><strong>Tình trạng hàng</strong></div>
+                    <div class="panel-body">
+                        <select class="form-control" name="stock_status" id="stock_status">
+                            <option value="">-- Tất cả --</option>
+
+                            @if (stockStatus == "in_stock")
+                            {
+                                <option value="in_stock" selected>Còn hàng</option>
+                            }
+                            else
+                            {
+                                <option value="in_stock">Còn hàng</option>
+                            }
+
+                            @if (stockStatus == "out_of_stock")
+                            {
+                                <option value="out_of_stock" selected>Hết hàng</option>
+                            }
+                            else
+                            {
+                                <option value="out_of_stock">Hết hàng</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+ </div>
+<script>
+    document.getElementById("sort_by").addEventListener("change", function () {
+        const selected = this.value;
+        const params = new URLSearchParams(window.location.search);
+        params.set("sort_by", selected);
+        window.location.search = params.toString();
+    });
+</script>

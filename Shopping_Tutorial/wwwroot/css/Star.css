@@ -1,0 +1,11 @@
+﻿.star-wrapper .fa {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+    .star-wrapper .fa.selected,
+    .star-wrapper .fa.hovered {
+        color: gold;
+    }

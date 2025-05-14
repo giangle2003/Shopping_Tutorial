@@ -1,0 +1,164 @@
+﻿@model IEnumerable<OrderDetails>
+@{
+    ViewData["title"] = "Chi tiết Đơn hàng";
+    decimal total = 0; // Tổng giá trị đơn hàng
+    decimal subtotal = 0;
+}
+<h3>Chi tiết đơn hàng</h3>
+
+<a asp-action="Index" asp-controller="Order" class="btn btn-primary btn-lg" style="margin-bottom: 10px">
+    <i class="fa fa-arrow-left"></i> Quay lại danh sách đơn hàng
+</a>
+<table class="table" id="detail_order">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Mã đơn hàng</th>
+            <th scope="col">Tên người dùng</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Giá sản phẩm</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Tổng giá</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int stt = 1;
+        }
+        @foreach (var item in Model)
+        {
+            subtotal = item.Price * item.Quantity;
+            total += subtotal;
+            <tr>
+                <input type="hidden" asp-for="@item.OrderCode" class="getId" />
+                <th scope="row">@stt</th>
+                <td>@item.OrderCode</td>
+                <td>@item.UserName</td>
+                <td>@item.Product.Name</td>
+                <td>@item.Price.ToString("#,##0 VNĐ")</td>
+                <td>@item.Quantity</td>
+                <td>@subtotal.ToString("#,##0 VNĐ")</td>
+            </tr>
+            stt++;
+        }
+        
+        <tr>
+            <td>Phí ship:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td>@ViewBag.ShippingCost.ToString("#,##0 VNĐ")</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Giảm giá:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td>@ViewBag.Discount.ToString("#,##0 VNĐ")</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tổng giá:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td>
+                <select class="form-control select-update-order">
+                    @if (ViewBag.OrderStatus == 1)
+                    {
+                        <option value="1" selected="selected">Đơn hàng mới</option>
+                        <option value="0">Đơn hàng xử lý</option>
+                        <option value="2">Đã giao hàng</option>
+                        <option value="3">Đã hủy</option>
+                        <option value="4">Đã nhận</option>
+                    }
+                    else if (ViewBag.OrderStatus == 0)
+                    {
+                        <option value="1">Đơn hàng mới</option>
+                        <option value="0" selected="selected">Đơn hàng xử lý</option>
+                        <option value="2">Đã giao hàng</option>
+                        <option value="3">Đã hủy</option>
+                        <option value="4">Đã nhận</option>
+                    }
+                    else if (ViewBag.OrderStatus == 2)
+                    {
+                        <option value="1">Đơn hàng mới</option>
+                        <option value="0">Đơn hàng xử lý</option>
+                        <option value="2" selected="selected">Đã giao hàng</option>
+                        <option value="3">Đã hủy</option>
+                        <option value="4">Đã nhận</option>
+                    }
+                    else if (ViewBag.OrderStatus == 3)
+                    {
+                        <option value="1">Đơn hàng mới</option>
+                        <option value="0">Đơn hàng xử lý</option>
+                        <option value="2">Đã giao hàng</option>
+                        <option value="3" selected="selected">Đã hủy</option>
+                        <option value="4">Đã nhận</option>
+
+                    }
+                    else if (ViewBag.OrderStatus == 4)
+                    {
+                        <option value="1">Đơn hàng mới</option>
+                        <option value="0">Đơn hàng xử lý</option>
+                        <option value="2">Đã giao hàng</option>
+                        <option value="3" >Đã hủy</option>
+                        <option value="4" selected="selected">Đã nhận</option>
+                    }
+                </select>
+            </td>
+            <td>@((total + Convert.ToDecimal(ViewBag.ShippingCost ?? 0) + ViewBag.Discount).ToString("#,##0 VNĐ")) </td>
+
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.select-update-order').change(function () {
+               var status = $(this).val(); //status = 1
+                var ordercode = $('.getId').val(); //
+                // alert(status);
+                // alert(ordercode);
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("UpdateOrder")",
+                    data: { status: status, ordercode: ordercode }, //Gửi data đến server
+                    success: function (result) {
+                        // Handle successful update
+                        if (result.success) {
+
+                            Swal.fire("Cập nhật đơn hàng thành công.");
+                        } else {
+
+                            Swal.fire("Cập nhật đơn hàng thất bại." + result.message);
+
+                        }
+                    }
+
+                });
+            });
+        });
+    </script>
+    <script>
+        new DataTable("#detail_order",{
+            layout: {
+                topStart: {
+                    buttons: ['pdf','print']
+                }
+            }
+        });
+    </script>
+}

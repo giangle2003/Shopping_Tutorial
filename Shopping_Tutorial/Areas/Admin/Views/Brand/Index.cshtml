@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BrandModel>
+
+<h3>Danh sách Thương hiệu</h3>
+
+
+<a asp-action="Create" asp-controller="Brand" class="btn btn-primary btn-lg rounded-pill shadow"> + Thêm Thương hiệu</a>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên thương hiệu</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Đường dẫn</th>
+            <th scope="col">Trạng thái</th>
+            <th scope="col">Lựa chọn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row"></th>
+                <td>@item.Name</td>
+                <td>@Html.Raw(@item.Description)</td>
+                <td>@item.Slug</td>
+                <td>@(item.Status == 1 ? "Hiển thị" : "Ẩn")</td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="Brand" asp-route-Id="@item.Id">
+                        <i class="fas fa-pencil-alt"></i>
+                        &nbsp;
+                        Edit
+                    </a>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm delete-link" asp-controller="Brand" asp-route-Id="@item.Id">
+                        <i class="fas fa-trash"></i>
+                        &nbsp;
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

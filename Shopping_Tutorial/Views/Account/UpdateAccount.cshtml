@@ -1,0 +1,110 @@
+﻿@model AppUserModel
+@{
+	ViewData["title"] = "UpdateAccount";
+}
+<style>
+	.input-group {
+		cursor: pointer;
+	}
+</style>
+<partial name="_NotificationPartial" />
+<div class="col-md-9" style="padding: 20px">
+	<h2>Cập nhật thông tin tài khoản!</h2>
+
+	<form asp-action="UpdateInfoAccount" asp-controller="Account" method="post">
+	<input type="hidden" asp-for="Id" />
+
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="form-group">
+		<label>Tên đăng nhập</label>
+		<input asp-for="UserName" readonly class="form-control" />
+		<span asp-validation-for="UserName" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label>Email</label>
+		<input asp-for="Email" readonly class="form-control" />
+		<span asp-validation-for="Email" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label>Số điện thoại</label>
+		<input asp-for="PhoneNumber" class="form-control" />
+		<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+		<label>Mật khẩu cũ</label>
+		<div style="position: relative;">
+			<input type="password" name="OldPass" class="form-control" id="passwordInput1" />
+			<i id="eyeIcon1" class="fa fa-eye" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;" onclick="togglePassword1()"></i>
+		</div>
+	</div>
+	<div class="form-group">
+		<label>Mật khẩu mới</label>
+		<div style="position: relative;">
+			<input type="password" name="NewPass" class="form-control" id="passwordInput2" />
+			<i id="eyeIcon2" class="fa fa-eye" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;" onclick="togglePassword2()"></i>
+		</div>
+		</div>
+	<div class="form-group">
+		<label>Xác nhận mật khẩu mới</label>
+		<div style="position: relative;">
+			<input type="password" name="ConfirmNewPass" class="form-control" id="passwordInput3" />
+			<i id="eyeIcon3" class="fa fa-eye" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;" onclick="togglePassword3()"></i>
+		</div>
+
+	</div>
+
+
+		<button type="submit" class="btn btn-default">Cập nhật</button>
+</form>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
+<script>
+	// Toggle hiển thị mật khẩu
+	function togglePassword1() {
+		var passwordInput1 = document.getElementById("passwordInput1");
+		var eyeIcon1 = document.getElementById("eyeIcon1");
+
+		if (passwordInput1.type === "password") {
+			passwordInput1.type = "text";
+			eyeIcon1.classList.remove("fa-eye");
+			eyeIcon1.classList.add("fa-eye-slash");
+		} else {
+			passwordInput1.type = "password";
+			eyeIcon1.classList.remove("fa-eye-slash");
+			eyeIcon1.classList.add("fa-eye");
+		}
+	}
+	function togglePassword2() {
+		var passwordInput2 = document.getElementById("passwordInput2");
+		var eyeIcon2 = document.getElementById("eyeIcon2");
+
+		if (passwordInput2.type === "password") {
+			passwordInput2.type = "text";
+			eyeIcon2.classList.remove("fa-eye");
+			eyeIcon2.classList.add("fa-eye-slash");
+		} else {
+			passwordInput2.type = "password";
+			eyeIcon2.classList.remove("fa-eye-slash");
+			eyeIcon2.classList.add("fa-eye");
+		}
+	}
+	function togglePassword3() {
+		var passwordInput3 = document.getElementById("passwordInput3");
+		var eyeIcon3 = document.getElementById("eyeIcon3");
+
+		if (passwordInput3.type === "password") {
+			passwordInput3.type = "text";
+			eyeIcon3.classList.remove("fa-eye");
+			eyeIcon3.classList.add("fa-eye-slash");
+		} else {
+			passwordInput3.type = "password";
+			eyeIcon3.classList.remove("fa-eye-slash");
+			eyeIcon3.classList.add("fa-eye");
+		}
+	}
+</script>

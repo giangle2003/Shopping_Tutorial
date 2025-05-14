@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán thành công";
+}
+<div class="container text-center mt-5" style="padding: 20px">
+    <div class="panel panel-success shadow-lg p-4 border-0 rounded-4" style="max-width: 600px; margin: auto;">
+        <div class="panel-body">
+            <i class="fa fa-check-circle text-success" style="font-size: 4rem; border: 3px solid green; border-radius: 50%; padding: 15px;"></i>
+            <h2 class="text-success mt-3">🎉 Thanh toán thành công! 🎉</h2>
+            <p class="text-muted">Cảm ơn bạn đã mua hàng. Đơn hàng của bạn đã được xác nhận và đang được xử lý.</p>
+            <div class="mt-4">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-success btn-lg rounded-pill shadow hover-effect">
+                    <i class="fa fa-shopping-cart"></i> Tiếp tục mua sắm
+                </a>
+                <a asp-controller="Account" asp-action="History" asp-route-status="1" class="btn btn-info btn-lg rounded-pill shadow hover-effect ms-2">
+                    <i class="fa fa-list-alt"></i> Xem đơn hàng
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .panel {
+        animation: fadeInUp 0.8s ease-in-out;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    @@keyframes fadeInUp {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    .hover-effect:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+</style>

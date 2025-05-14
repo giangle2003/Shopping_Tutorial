@@ -1,0 +1,99 @@
+﻿
+<style>
+	/* Thiết kế thông báo giống hình */
+	.notification {
+		position: fixed;
+		top: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 9999;
+		background-color: #34A853;
+		color: white;
+		padding: 15px 25px;
+		border-radius: 12px;
+		font-size: 18px;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+	}
+
+		/* Hiệu ứng khi ẩn thông báo */
+		.notification.hide-alert {
+			opacity: 0;
+			top: 5%;
+		}
+		/* Biểu tượng dấu check */
+		.notification i {
+			font-size: 22px;
+			margin-right: 10px;
+		}
+
+	.notification-errorr{
+		position: fixed;
+		top: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 9999;
+		background-color: red;
+		color: white;
+		padding: 15px 25px;
+		border-radius: 12px;
+		font-size: 18px;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+	}
+
+		.notification-errorr.hide-alert {
+		opacity: 0;
+		top: 5%;
+	}
+	/* Biểu tượng dấu check */
+		.notification-errorr i {
+		font-size: 22px;
+		margin-right: 10px;
+	}
+ </style> 
+@if(TempData["success"] != null){ 
+    <div class="alert alert-success notification" id="success-alert"> 
+         <i class="fa fa-check-circle"></i> 
+        @TempData["success"] 
+     </div> 
+ } 
+@if(TempData["errorr"] != null){ 
+	 <div class="alert alert-danger notification-errorr" id="error-alert">
+         <i class="fa fa-times-circle"></i>
+         @TempData["errorr"] 
+     </div>
+}
+
+
+
+<script> 
+	   document.addEventListener("DOMContentLoaded", function () {
+		// Tự động ẩn thông báo sau 5 giây
+		let successAlert = document.getElementById("success-alert");
+		let errorAlert = document.getElementById("error-alert");
+
+		if (successAlert) {
+			setTimeout(() => {
+				successAlert.classList.add("hide-alert"); // Thêm hiệu ứng CSS trước khi ẩn
+				setTimeout(() => successAlert.remove(), 500); // Xóa sau khi hiệu ứng chạy xong
+			}, 5000); // Đợi 5 giây trước khi ẩn
+		}
+
+		if (errorAlert) {
+			setTimeout(() => {
+				errorAlert.classList.add("hide-alert");
+				setTimeout(() => errorAlert.remove(), 500);
+			}, 3000);
+		}
+	});
+
+ </script>

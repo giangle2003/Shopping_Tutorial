@@ -1,0 +1,120 @@
+﻿@model IEnumerable<CouponModel>
+@{
+    ViewData["Title"] = "Create Coupon";
+    int stt = 1;
+}
+<h3>Danh sách mã giảm giá</h3>
+
+  
+    <a asp-action="Create" asp-controller="Coupon" class="btn btn-primary btn-lg rounded-pill shadow"> + Thêm mã giảm giá</a>
+    <table class="table table-striped" id="myTable">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Mô tả</th>
+                <th>Ngày bắt đầu</th>
+                <th>Ngày kết thúc</th>
+                <th>Số lượng</th>
+                <th>Hoạt động</th>
+                <th>Trạng thái</th>
+                <th>Lựa chọn</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var coupon in ViewBag.Coupons)
+            {
+                <tr>
+                    <td>@stt</td>
+                    <td>@coupon.Name</td>
+                    <td>@coupon.Description</td>
+                    <td>@coupon.DateStar.ToString("dd-MM-yyyy")</td>
+                    <td>@coupon.DateExpired.ToString("dd-MM-yyyy")</td>
+                    <td>@coupon.Quantity</td>
+                    <td>
+                        @if (@coupon.Status == 1)
+                        {
+                            <select name="Status">
+                                <option selected value="1">Kích hoạt</option>
+                                <option value="0">Ẩn</option>
+                            </select>
+                        }
+                        else
+                        {
+                            <select name="Status">
+                                <option value="1">Kích hoạt</option>
+                                <option selected value="0">Ẩn</option>
+                            </select>
+                        }
+
+                    </td>
+
+                    <td>
+                        @if (coupon.DateExpired < DateTime.Now)
+                        {
+                            <span class="text text-danger">Expired</span>
+                        }
+                        else
+                        {
+                            TimeSpan remainingTime = coupon.DateExpired - DateTime.Now;
+                            int daysRemaining = remainingTime.Days;
+                            @if (daysRemaining == 0)
+                            {
+                                <span class="text text-danger">Today</span>
+                            }
+                            else
+                            {
+                                <span class="text text-success">@daysRemaining days left</span>
+                            }
+
+                        }
+                    </td>
+                    <td>
+                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="Coupon" asp-route-Id="@coupon.Id">
+                        <i class="fas fa-pencil-alt"></i>
+                        &nbsp;
+                        Edit
+                    </a>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm delete-link" asp-controller="Coupon" asp-route-Id="@coupon.Id">
+                        <i class="fas fa-trash"></i>
+                        &nbsp;
+                        Delete
+                    </a>
+
+                    </td>
+                </tr>
+            stt++;
+            }
+        </tbody>
+    </table>
+
+
+
+@section Scripts {
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeYear: true,
+                minDate: 0,
+                showButtonPanel: true,
+                dateFormat: 'dd/mm/yy'
+
+            });
+
+        });
+        $(function () {
+            $("#datepicker2").datepicker({
+                changeYear: true,
+                minDate: +1,
+                showButtonPanel: true,
+                dateFormat: 'dd/mm/yy'
+
+                    });
+
+                });
+    </script>
+}

@@ -1,0 +1,103 @@
+﻿@model IEnumerable<OrderModel>
+
+@{
+    ViewData["Title"] = "List Orders History" + @ViewBag.UserEmail;
+    int stt = 1;
+}
+
+    <h3>Danh sách đơn hàng đã mua</h3>
+<ul class="nav nav-pills" style="margin-bottom: 20px;">
+   
+    <li role="presentation" class="@(ViewBag.Filter == 1 ? "active" : "")">
+        <a asp-action="History" asp-controller="Account" asp-route-status="1">Chờ xác nhận</a>
+    </li>
+    <li role="presentation" class="@(ViewBag.Filter == 0 ? "active" : "")">
+        <a asp-action="History" asp-controller="Account" asp-route-status="0">Chờ xử lý</a>
+    </li>
+    <li role="presentation" class="@(ViewBag.Filter == 2 ? "active" : "")">
+        <a asp-action="History" asp-controller="Account" asp-route-status="2">Chờ giao hàng</a>
+    </li>
+    <li role="presentation" class="@(ViewBag.Filter == 4 ? "active" : "")">
+        <a asp-action="History" asp-controller="Account" asp-route-status="4">Đã nhận</a>
+    </li>
+    <li role="presentation" class="@(ViewBag.Filter == 3 ? "active" : "")">
+        <a asp-action="History" asp-controller="Account" asp-route-status="3">Đã hủy</a>
+    </li>
+</ul>
+
+    <table class="table" id="myTable">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã đơn</th>
+                <th>Ngày mua</th>
+                <th>Trạng thái</th>
+                <th>Lựa chọn</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@stt</td>
+                    <td>@item.OrderCode</td>
+                    <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
+                    <td>
+                        @if (item.Status == 1)
+                        {
+                        <span class="label label-success">Đơn hàng mới</span>
+                        }
+                        else if (item.Status == 0)
+                        {
+                            <span class="label label-warning">Đơn hàng xử lý</span>
+                        }
+                        else if (item.Status == 2)
+                        {
+                            <span class="label label-info">Đơn hàng đang giao</span>
+                        }
+                        else if (item.Status == 4)
+                        {
+
+                            <span class="label label-primary">Đã nhận</span>
+                        }
+                        else if (item.Status == 3)
+                        {
+
+                            <span class="label label-danger">Đã hủy</span>
+                        }
+                    </td>
+                <td>
+                    @if (item.Status == 0 || item.Status == 1)
+                    {
+                                <a class="btn btn-primary btn-sm"
+                                    asp-action="DetailOrder"
+                                    asp-controller="Account"
+                                    asp-route-ordercode="@item.OrderCode">
+                                    Chi tiết đơn hàng
+                                </a>
+                            <a onclick="return confirm('Bạn xác nhận muốn hủy?')"
+                               class="btn btn-danger btn-sm"
+                               asp-action="CancelOrder"
+                               asp-controller="Account"
+                               asp-route-ordercode="@item.OrderCode">
+                               Hủy đơn hàng
+                           </a>
+
+                           
+                    }
+                    else if (item.Status == 2)
+                    {
+                        <a class="btn btn-success btn-sm"
+                           asp-action="ReceiveOrder"
+                           asp-controller="Account"
+                           asp-route-ordercode="@item.OrderCode">Đã nhận</a>
+                    }
+                    
+                </td>
+
+                </tr>
+            stt++;
+            }
+        </tbody>
+    </table>
+

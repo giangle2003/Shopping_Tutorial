@@ -1,0 +1,53 @@
+﻿@model ColorModel
+@{
+    ViewData["title"] = "Create Brand";
+}
+<style>
+    .custom-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: #007bff;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .custom-back-btn:hover {
+            background: #0056b3;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+</style>
+
+<h4>Thêm mới màu sắc</h4>
+<div class="col-9">
+    <form asp-action="Create" enctype="multipart/form-data" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label>Tên màu</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">
+                Thêm mới
+            </button>
+        </div>
+    </form>
+    <a asp-action="Index" class="custom-back-btn"><i class="fa-solid fa-arrow-left"></i> Trở về trang Danh sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+

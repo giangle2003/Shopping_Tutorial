@@ -1,0 +1,73 @@
+﻿@model IEnumerable<OrderModel>
+@{
+    ViewData["title"] = "Đơn hàng";
+    int stt = 1;
+}
+<h3>Danh sách Đơn hàng</h3>
+
+
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Mã đơn hàng</th>
+            <th scope="col">Tên đơn hàng</th>
+            <th scope="col">Ngày tạo đơn</th>
+            <th scope="col">Địa chỉ nhận hàng</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Trạng thái</th>
+            <th scope="col">Lựa chọn</th>
+        </tr>
+    </thead>
+    <tbody>      
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@stt</td>
+                <td>@item.OrderCode</td>
+                <td>@item.UserName</td>
+                <td>@item.CreatedDate</td>
+                <td>@item.ShippingAddress</td>
+                <td>@item.PhonenumberDelivery</td>
+                <td>
+                    @if (item.Status == 1)
+                    {
+                        <span class="label label-danger">Đơn hàng mới</span> @* Màu đỏ *@
+                    }
+                    else if (item.Status == 0)
+                    {
+                        <span class="label label-warning">Đơn hàng đang xử lý</span> @* Màu vàng *@
+                    }
+                    else if (item.Status == 2)
+                    {
+                        <span class="label label-info">Đơn hàng đã giao</span> @* Màu xanh dương *@
+                    }
+                    else if(item.Status == 3)
+                    {
+                        <span class="label label-success">Đơn hàng đã hủy</span> @* Màu xanh lá *@
+                    }
+                    else if (item.Status == 4)
+                    {
+                        <span class="label label-primary">Đơn đã nhận</span> @* Màu xanh lá *@
+                    }
+                </td>
+
+                <td>
+                    <a asp-action="ViewOrder" class="btn btn-warning btn-sm" asp-controller="Order" asp-route-ordercode="@item.OrderCode">
+                        <i class="fas fa-folder"></i>
+                        &nbsp;
+                        Chi tiết
+                    </a>
+                    <a asp-action="Delete" class="btn btn-danger btn-sm delete-link" asp-controller="Order" asp-route-ordercode="@item.OrderCode">
+                        <i class="fas fa-trash"></i>
+                        &nbsp;
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            stt++;
+        }
+
+
+    </tbody>
+</table>

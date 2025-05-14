@@ -1,0 +1,71 @@
+﻿@model ProductModel
+@{
+    ViewData["Title"] = "Thêm Màu cho Sản phẩm";
+}
+
+<h3>Thêm Màu cho Sản phẩm: @Model.Name</h3>
+
+<form method="post">
+    <div class="form-group">
+        <label for="colorId">Chọn Màu</label>
+        <select id="colorId" name="colorId" class="form-control">
+            @foreach (var color in (SelectList)ViewData["Colors"])
+            {
+                    <option value="@color.Value">@color.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="quantity">Số lượng</label>
+        <input type="number" id="quantity" name="quantity" class="form-control" min="1" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Thêm màu</button>
+</form>
+<hr />
+<h4>Các màu đã thêm</h4>
+@if (Model.ProductColors != null && Model.ProductColors.Any())
+{
+    int stt = 1;
+    int totalQuantity = 0;
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Màu sắc</th>
+                <th>Số lượng</th>
+                <th>Lựa chọn</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pc in Model.ProductColors)
+            {
+                totalQuantity += pc.Quantity;
+                <tr>
+                    <td>@stt</td>
+                    <td>@pc.Color.Name</td>
+                    <td>@pc.Quantity</td>
+                    <td>
+                        <form asp-action="RemoveColor" method="post" style="display:inline;">
+                            <input type="hidden" name="productId" value="@Model.Id" />
+                            <input type="hidden" name="colorId" value="@pc.ColorId" />
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa màu này?')">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+                stt++;
+            }
+            <tr>
+                <td colspan="2"><strong>Tổng số lượng</strong></td>
+                <td><strong>@totalQuantity</strong></td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Chưa có màu nào được thêm.</p>
+}
+<a asp-action="Index" class="custom-back-btn"><i class="fa-solid fa-arrow-left"></i> Trở về trang Danh sách</a>
+

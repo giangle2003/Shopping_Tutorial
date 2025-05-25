@@ -21,23 +21,37 @@
             <!--CHI TIẾT SẢN PHẨM-->
             <div class="col-sm-5">
                 <div class="view-product">
-                    <img src="~/media/products/@Model.ProductDetails.Image" alt="" />
-                    <h3>ZOOM</h3>
+                    <img id="mainImage" src="~/media/products/@Model.ProductDetails.Image" alt="" />
+                    <h3>
+                        <a href="~/media/products/@Model.ProductDetails.Image" data-lightbox="zoom" data-title="Phóng to ảnh">
+                            ZOOM
+                        </a>
+                    </h3>
                 </div>
                 <div id="similar-product" class="carousel slide" data-ride="carousel">
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        <div class="item">
-                            <a href="">
-                                <img src="~/media/products/@Model.ProductDetails.Image" alt="" />
+                        <div class="item active">
+                            <a href="javascript:void(0)">
+                                <img src="~/media/products/@Model.ProductDetails.Image" alt="Ảnh chính" style="height: 80px; width: auto;" onclick="changeImage(this)" />
                             </a>
-                            <a href="">
-                                <img src="~/media/products/@Model.ProductDetails.Image" alt="" />                                
-                            </a>
-                            <a href="">
-                                <img src="~/media/products/@Model.ProductDetails.Image" alt="" />
-                            </a>
+
+                            @foreach (var img in Model.ProductDetails.ProductImages)
+                            {
+                                <a href="javascript:void(0)">
+                                    <img src="@img.ImagePath" alt="Ảnh phụ" style="height: 75px; width: auto;" onclick="changeImage(this)" />
+                                </a>
+                            }
+                            @* <a href="javascript:void(0)"> *@
+                            @*     <img src="~/media/products/06acd640-d980-434e-9b69-39f25aa0023e-lt_2.jpg" alt="" style="height: 80px; width: auto;" onclick="changeImage(this)" /> *@
+                            @* </a> *@
+                            @* <a href="javascript:void(0)"> *@
+                            @*     <img src="~/media/products/@Model.ProductDetails.Image" alt="" style="height: 80px; width: auto;" onclick="changeImage(this)" /> *@
+                            @* </a> *@
+                            @* <a href="javascript:void(0)"> *@
+                            @*     <img src="~/media/products/@Model.ProductDetails.Image" alt="" style="height: 80px; width: auto;" onclick="changeImage(this)" /> *@
+                            @* </a> *@
                         </div>
 
                     </div>
@@ -60,7 +74,8 @@
                     <p style="font-size:18px"><strong>Trạng thái:</strong> In Stock</p>
                     <p style="font-size:18px"><strong>Tình trạng:</strong> New</p>
                     <p style ="font-size:18px"><strong>Thương hiệu:</strong> @Model.ProductDetails.Brand.Name</p>
-                    <p style="font-size:18px"><strong>Loại:</strong> @Model.ProductDetails.Category.Name</p>                    <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
+                    <p style="font-size:18px"><strong>Loại:</strong> @Model.ProductDetails.Category.Name</p>                    
+                    @* <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a> *@
 
                     <span>
                         <span style="font-size:18px">Giá gốc : <del> @Model.ProductDetails.OriginalPrice.ToString("#,##0 VNĐ")</del></span>
@@ -431,5 +446,11 @@
 
                 });
             });
+    </script>
+    <script>
+        function changeImage(thumbnail) {
+            var mainImg = document.getElementById("mainImage");
+            mainImg.src = thumbnail.src;
+        }
     </script>
  }

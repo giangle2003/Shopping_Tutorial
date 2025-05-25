@@ -1,71 +1,105 @@
 ﻿@model UserModel
 @{
-	ViewData["title"] = "Register";
+    ViewData["title"] = "Register";
 }
 <style>
-	.input-group {
-		cursor: pointer;
-	}
-</style>
-<section id="">
-	<!--form-->
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-1">
-				<div class="signup-form">
-					<!--sign up form-->
-					<h2>Đăng ký thành viên mới!</h2>
-					<form asp-action="Create" asp-controller="Account">
-						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-						<div class="form-group">
-							<label>Tên đăng nhập</label>
-							<input asp-for="Username" class="form-control" />
-							<span asp-validation-for="Username" class="text-danger"></span>
-						</div>
-						<div class="form-group">
-							<label>Email</label>
-							<input asp-for="Email" class="form-control"/>
-							<span asp-validation-for="Email" class="text-danger"></span>
-						</div>
-					
-						<div class="form-group">
-							<label>Mật khẩu</label>
-							<div class="input-group">
-								<input asp-for="Password" class="form-control" id="passwordInput" type="password" />
-								<span class="input-group-addon" onclick="togglePassword()">
-									<i id="eyeIcon" class="fa fa-eye"></i>
-								</span>
-							</div>
-							<span asp-validation-for="Password" class="text-danger"></span>
-						</div>
-					
-						<button type="submit" class="btn btn-default">Đăng kí</button>
-					</form>
+    .register-container {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
 
-				</div><!--/sign up form-->
-			</div>
-		</div>
-	</div>
-</section><!--/form-->
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #f0ad4e;
+        }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .input-group-addon {
+        background-color: #fff;
+        border-left: 0;
+        cursor: pointer;
+    }
+
+    .input-group .form-control {
+        border-right: 0;
+    }
+
+    .btn-register {
+        width: 100%;
+        background-color: #f0ad4e;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+        .btn-register:hover {
+            background-color: #f0ad4e;
+        }
+</style>
+
+<section>
+    <div class="container">
+        <div class="register-container">
+            <h2>Đăng ký thành viên mới!</h2>
+            <form asp-action="Create" asp-controller="Account">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label for="Username">Tên đăng nhập</label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="Password">Mật khẩu</label>
+                    <div class="input-group">
+                        <input asp-for="Password" class="form-control" id="passwordInput" type="password" />
+                        <span class="input-group-addon" onclick="togglePassword()">
+                            <i id="eyeIcon" class="fa fa-eye"></i>
+                        </span>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-register">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+</section>
+
 @section Scripts {
-	@{
-		await Html.RenderPartialAsync("_ValidationScriptsPartial");
-	}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
 <script>
-	// Toggle hiển thị mật khẩu
-	function togglePassword() {
-		var passwordInput = document.getElementById("passwordInput");
-		var eyeIcon = document.getElementById("eyeIcon");
+    function togglePassword() {
+        var passwordInput = document.getElementById("passwordInput");
+        var eyeIcon = document.getElementById("eyeIcon");
 
-		if (passwordInput.type === "password") {
-			passwordInput.type = "text";
-			eyeIcon.classList.remove("fa-eye");
-			eyeIcon.classList.add("fa-eye-slash");
-		} else {
-			passwordInput.type = "password";
-			eyeIcon.classList.remove("fa-eye-slash");
-			eyeIcon.classList.add("fa-eye");
-		}
-	}
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+        }
+    }
 </script>

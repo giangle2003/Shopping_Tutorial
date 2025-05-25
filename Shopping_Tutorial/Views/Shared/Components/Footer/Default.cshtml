@@ -10,12 +10,12 @@
         </div>
 
         <!-- Bản đồ -->
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-5" style="margin-top: 50px;width: 400px; height: 250px">
             @Html.Raw(@Model.Map)
         </div>
 
         <!-- Thông tin liên hệ -->
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-3 text-center" >
             <div class="address">
                 <h4><b>@Model.Name</b></h4>
                 <h5>Email: <a href="mailto:@Model.Email">@Model.Email</a></h5>

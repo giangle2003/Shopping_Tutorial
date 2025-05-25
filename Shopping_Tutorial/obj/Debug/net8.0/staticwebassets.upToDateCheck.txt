@@ -88,6 +88,7 @@ wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\media\logo\2149f45c-4478-4589-8af5-df33d50f6cc3-logo_1.png
+wwwroot\media\products\03c0610c-0781-4d29-8bf7-8bc69ab4f8e2.png
 wwwroot\media\products\06acd640-d980-434e-9b69-39f25aa0023e-lt_2.jpg
 wwwroot\media\products\0962e209-91f1-4ea1-88f3-3b0e9c30442c-pc_2.jpg
 wwwroot\media\products\0c572aff-04c2-44b5-9e99-3bfef36f35b9-tl5.webp
@@ -145,6 +146,7 @@ wwwroot\media\products\a60c6bb7-fa5f-4d52-ac98-8e5f239fccee-tl9.webp
 wwwroot\media\products\a8eaf602-0c95-415a-8b05-e1063bdefd70-pk5.webp
 wwwroot\media\products\a8f73e7d-6062-4fc7-a123-3455fca2da6f-tl1.jpg
 wwwroot\media\products\abdef146-ee30-4c13-a2b6-7a40ef8675f2-pc)15.webp
+wwwroot\media\products\ac1a1aff-5221-445f-b9ae-82602781e810.jpg
 wwwroot\media\products\ac2603b1-ebb3-464b-bd33-bb509803777d-pk2.webp
 wwwroot\media\products\ac97f844-d9f1-4259-b322-7b2f8f9c0ee6-laptop_4.png
 wwwroot\media\products\b77083cc-1969-4c73-9488-4cea2c9042f3-pc_15.webp
@@ -160,6 +162,7 @@ wwwroot\media\products\ca6a7d1c-90a6-48d2-9e23-9f2b76dea813-pk15.webp
 wwwroot\media\products\ccc22a4f-53fd-4e64-9ee7-04e0a2a98382-laptop_3.jpg
 wwwroot\media\products\cdcd8eac-292a-4503-a643-5fd8a50ecbc1-2021_05_10_08_57_22_1-390x510.jpg
 wwwroot\media\products\cecaa646-2a62-444c-9f0d-897aede1b547-Air_M3.png
+wwwroot\media\products\d69c931b-3d27-4ebd-ad7c-b6a3fdfdf365.jpg
 wwwroot\media\products\da41681a-bc32-44b2-bbb7-70a8e04ba4b5-pc_12.webp
 wwwroot\media\products\dbd746bb-8d2b-464a-b1e7-110ae146f151-lt6.webp
 wwwroot\media\products\df147f76-7d12-4612-86c3-930c8ebb1a31-lk7.webp

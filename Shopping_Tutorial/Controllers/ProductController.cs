@@ -30,6 +30,7 @@ namespace Shopping_Tutorial.Controllers
                 .Include(p=>p.Ratings)
                 .Include(p => p.ProductColors) // Bao gồm thông tin màu sắc
                  .ThenInclude(pc => pc.Color)  
+                 .Include(p => p.ProductImages) // Bao gồm thông tin ảnh phụ
                 .Where(p => p.Id == Id)
                 .FirstOrDefault();
         
@@ -79,8 +80,8 @@ namespace Shopping_Tutorial.Controllers
                 ProductDetails = productsById,
                 HasRated = hasRated,
                 Ratings = ratings,
-                 ProductColors = productsById.ProductColors.ToList() // Truyền màu sắc vào ViewModel
-
+                 ProductColors = productsById.ProductColors.ToList(), // Truyền màu sắc vào ViewModel
+                 ProductImages = productsById.ProductImages.ToList() // Truyền ảnh phụ vào ViewModel
             };
             
             return View(viewModel);

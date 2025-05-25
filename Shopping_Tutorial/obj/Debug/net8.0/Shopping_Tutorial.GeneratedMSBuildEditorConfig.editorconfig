@@ -84,6 +84,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcVmlld09yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/DOAN/Shopping_Tutorial/Shopping_Tutorial/Areas/Admin/Views/ProductImage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEltYWdlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DOAN/Shopping_Tutorial/Shopping_Tutorial/Areas/Admin/Views/ProductImage/ManageImages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEltYWdlXE1hbmFnZUltYWdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/DOAN/Shopping_Tutorial/Shopping_Tutorial/Areas/Admin/Views/Product/AddColor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxBZGRDb2xvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

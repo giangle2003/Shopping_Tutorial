@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Shopping_Tutorial.Models.ProductImage>
+@{
+    ViewBag.Title = "Quản lý ảnh sản phẩm";
+    var productId = (long)ViewBag.ProductId;
+}
+
+<h3>Ảnh sản phẩm: @ViewBag.ProductName</h3>
+
+<form asp-action="ManageImages" asp-route-productId="@productId" method="post" enctype="multipart/form-data">
+    <input type="file" name="images" multiple />
+    <button type="submit" class="btn btn-success">Tải ảnh lên</button>
+</form>
+
+<hr />
+
+<div class="row">
+    @foreach (var img in Model)
+    {
+        <div class="col-md-3" id="image_@img.Id" style="margin-bottom: 20px;">
+            <img src="@img.ImagePath" width="100%" />
+            <button class="btn btn-danger btn-block btnDeleteImage" data-id="@img.Id">Xóa ảnh</button>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function(){
+            $('.btnDeleteImage').click(function(){
+                var id = $(this).data('id');
+                if(confirm('Bạn có chắc muốn xóa ảnh này?')){
+                    $.post('/admin/productimage/deleteimage', { id: id }, function(data){
+                        if(data.success){
+                            $('#image_' + id).remove();
+                        } else {
+                            alert(data.message);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<dynamic>
+
+<h2>Danh sách sản phẩm</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ảnh chính</th>
+            <th>Tên sản phẩm</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img src="@item.Image" alt="Image" width="100" /></td>
+                <td>@item.Name</td>
+                <td>
+                    <a href="@Url.Action("ManageImages", "ProductImage", new { productId = item.Id })" class="btn btn-primary">Thêm ảnh</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,15 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\DOAN\\Shopping_Tutorial\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1A5AE6-C010-49A5-9C37-57B32CCD4A2F}|Shopping_Tutorial\\Shopping_Tutorial.csproj|e:\\doan\\shopping_tutorial\\shopping_tutorial\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE1A5AE6-C010-49A5-9C37-57B32CCD4A2F}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1A5AE6-C010-49A5-9C37-57B32CCD4A2F}|Shopping_Tutorial\\Shopping_Tutorial.csproj|e:\\doan\\shopping_tutorial\\shopping_tutorial\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE1A5AE6-C010-49A5-9C37-57B32CCD4A2F}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1A5AE6-C010-49A5-9C37-57B32CCD4A2F}|Shopping_Tutorial\\Shopping_Tutorial.csproj|e:\\doan\\shopping_tutorial\\shopping_tutorial\\areas\\admin\\views\\productimage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE1A5AE6-C010-49A5-9C37-57B32CCD4A2F}|Shopping_Tutorial\\Shopping_Tutorial.csproj|solutionrelative:shopping_tutorial\\areas\\admin\\views\\productimage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 229,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,6 +59,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\DOAN\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Views\\Product\\Details.cshtml",
+              "ToolTip": "E:\\DOAN\\Shopping_Tutorial\\Shopping_Tutorial\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "Shopping_Tutorial\\Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-25T21:44:40.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "E:\\DOAN\\Shopping_Tutorial\\Shopping_Tutorial\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Controllers\\ProductController.cs",
+              "ToolTip": "E:\\DOAN\\Shopping_Tutorial\\Shopping_Tutorial\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Shopping_Tutorial\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowBYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T21:42:20.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\DOAN\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Shopping_Tutorial\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "ToolTip": "E:\\DOAN\\Shopping_Tutorial\\Shopping_Tutorial\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "RelativeToolTip": "Shopping_Tutorial\\Areas\\Admin\\Views\\ProductImage\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-25T21:05:55.358Z",
+              "EditorCaption": ""
             }
           ]
         },

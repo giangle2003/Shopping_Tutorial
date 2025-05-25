@@ -16,6 +16,8 @@ namespace Shopping_Tutorial.Models.ViewModels
 
         // Thêm thuộc tính màu sắc để hiển thị trong view
         public List<ProductColor> ProductColors { get; set; } = new List<ProductColor>(); // Danh sách màu sắc của sản phẩm
+        // Thêm danh sách ảnh phụ
+        public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
 
     }
 }

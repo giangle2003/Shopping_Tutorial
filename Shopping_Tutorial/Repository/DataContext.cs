@@ -31,12 +31,19 @@ namespace Shopping_Tutorial.Repository
         public DbSet<MomoInforModel> MomoInfors { get; set; }
         public DbSet<CartItemModel> CartItems { get; set; }
         public DbSet<CouponCategory> CouponCategories { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductColor>()
                 .HasKey(pc => new { pc.ProductId, pc.ColorId }); // Đặt khóa chính là sự kết hợp của ProductId và ColorId
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ProductModel>()
+            .HasMany(p => p.ProductImages)
+            .WithOne(pi => pi.Product)
+            .HasForeignKey(pi => pi.ProductId)
+            .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -212,7 +212,7 @@
                                             <button type="button"
                                             class="btn btn-primary btn-sm btn-checkout"
                                             onclick="submitCheckoutForm()">
-                                                Xác nhận đặt hàng
+                                               Thanh toán COD
                                             </button>
                                         }
                                         else
@@ -220,27 +220,36 @@
                                             <button type="button"
                                             class="btn btn-primary btn-sm btn-checkout"
                                             disabled>
-                                                Xác nhận đặt hàng
+                                                Thanh toán COD
                                             </button>
                                             <p><span class="text text-danger">Nhập địa chỉ giao hàng</span></p>
                                         }
                                     </form>
                                 </td>
                                 <td>
-                                    <form id="MomoForm" method="POST" asp-action="CreatePaymentMomo" asp-controller="Payment">
+                                    <div class="form-inline">
+
+                                        <form id="MomoForm" method="POST" asp-action="CreatePaymentMomo" asp-controller="Payment" style="display: inline-block; margin-right:10px;">
                                         <input type="hidden" id="fullAddressMomo" name="fullAddress" />
                                         <input type="hidden" id="phoneNumberMomo" name="phoneNumber" />
 
                                         <input type="hidden" name="Amount" value="@(Convert.ToInt64(Model.ShippingCost + Model.GrandTotal - Giamgia))" />
-                                        <input type="hidden" name="OrderInformation" value="Thanh toán Momo cho đơn hàng ANTT Tech" />
+                                        <input type="hidden" name="OrderInformation" value="Thanh toán Momo cho đơn hàng SMARTTECH" />
                                         <input type="hidden" name="FullName" value="@User.Identity.Name" />
-                                        <button class="btn btn-danger" name="PayUrl" type="submit" onclick="submitMomoForm()">Thanh toán MoMo</button>
+                                        <button class="btn btn-danger" name="PayUrl" type="button" onclick="submitMomoForm()">Thanh toán MoMo</button>
                                     </form>
-                                    <form method="POST" asp-action="CreatePaymentUrlVnpay" asp-controller="Payment">
+                                        <form id="VNPayForm" method="POST" asp-action="CreatePaymentUrlVnpay" asp-controller="Payment" style="display: inline-block;">
+                                        <input type="hidden" id="fullAddressVNPay" name="fullAddress" />
+                                        <input type="hidden" id="phoneNumberVNPay" name="phoneNumber" />
 
-                                        
-                                        <button class="btn btn-success" type="submit">Thanh toán Vnpay</button>
+
+                                        <input type="hidden" name="Amount" value="@(Convert.ToInt64(Model.ShippingCost + Model.GrandTotal - Giamgia))" />
+                                        <input type="hidden" name="OrderDescription" value="Thanh toán VNPAY cho đơn hàng SMARTTECH Tech" />
+                                        <input type="hidden" name="Name" value="@User.Identity.Name" />
+                                        <input type="hidden" name="OrderType" value="other" />
+                                        <button class="btn btn-success" type="button" onclick="submitVNPayForm()">Thanh toán Vnpay</button>
                                     </form>
+                                    </div>
                                 </td>
                             }
                         </tr>
@@ -350,7 +359,26 @@
                 resetShippingInfo();
             }
         }
+        function submitVNPayForm() {
+            saveShippingInfoToLocalStorage();
 
+            var fullAddress = localStorage.getItem('address');
+            var phone = localStorage.getItem('phone');
+
+            if (!fullAddress || !phone) {
+                Swal.fire("Vui lòng nhập đầy đủ địa chỉ và số điện thoại trước khi thanh toán VNPAY.");
+                return;
+            }
+
+            // Gán giá trị vào các hidden input
+            $("#fullAddressVNPay").val(fullAddress);
+            $("#phoneNumberVNPay").val(phone);
+
+            if (confirm("Xác nhận thanh toán VNPay?")) {
+                $("#VNPayForm").submit();
+                resetShippingInfo();
+            }
+        }
                 
         
         function resetShippingInfo() {

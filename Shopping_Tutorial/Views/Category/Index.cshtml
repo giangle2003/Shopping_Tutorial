@@ -13,22 +13,22 @@
 		pageNo = pager.CurrentPage;
 	}
 }
+<div class="row">
+	<div class="col-sm-3">
+		@Html.Partial("_SideBarPartial")
+	</div>
 
-<div class="col-sm-3">
-	@Html.Partial("_SideBarPartial")
-</div>
+	<div class="col-sm-9 padding-right">
+		<div class="features_items">
+			@if (ViewBag.Count > 0)
+			{
+				<partial name="_FilterProductPartial" />
+			}
+			<!--features_items-->
+			<h2 class="title text-center">@ViewBag.Slug</h2>
 
-<div class="col-sm-9 padding-right">
-	<div class="features_items">
-		@if (ViewBag.Count > 0)
-		{
-			<partial name="_FilterProductPartial" />
-		}
-		<!--features_items-->
-		<h2 class="title text-center">@ViewBag.Slug</h2>
-
-		@foreach (var item in Model)
-		{
+			@foreach (var item in Model)
+			{
 			<div class="col-sm-4">
 				<div class="product-image-wrapper">
 					<a>
@@ -76,8 +76,13 @@
 				</div>
 			</div>
 		}
-	</div><!--features_items-->
-	<partial name="_Paging" model="@pager" />
+	</div>
+	@* <partial name="_Paging" model="@pager" /> *@
+		<div style="max-width: 400px">
+			<partial name="_Paging" model="@pager" />
+		</div>
+
+	</div>
 </div>
 @section Scripts{
 

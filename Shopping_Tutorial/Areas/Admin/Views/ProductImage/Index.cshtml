@@ -2,9 +2,10 @@
 
 <h2>Danh sách sản phẩm</h2>
 
-<table class="table table-bordered">
+<table class="table table-bordered" id="myTable">
     <thead>
         <tr>
+            <th>STT</th>
             <th>Ảnh chính</th>
             <th>Tên sản phẩm</th>
             <th>Hành động</th>
@@ -14,6 +15,7 @@
         @foreach (var item in Model)
         {
             <tr>
+                <th scope="row"></th>
                 <td><img src="@item.Image" alt="Image" width="100" /></td>
                 <td>@item.Name</td>
                 <td>

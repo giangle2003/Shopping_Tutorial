@@ -492,7 +492,8 @@ namespace Shopping_Tutorial.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("OrderCode")
                         .HasColumnType("nvarchar(max)");
@@ -796,6 +797,37 @@ namespace Shopping_Tutorial.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Statisticals");
+                });
+
+            modelBuilder.Entity("Shopping_Tutorial.Models.VnpayModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OrderDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentMethod")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TransactionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VnpayInfors");
                 });
 
             modelBuilder.Entity("Shopping_Tutorial.Models.WishlistModel", b =>

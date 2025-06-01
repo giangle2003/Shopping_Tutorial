@@ -1,0 +1,165 @@
+﻿@{
+    ViewData["Title"] = "Hướng dẫn mua hàng từ xa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .guide-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+        .guide-container h1 {
+            font-size: 26px;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+    .step {
+        margin-bottom: 25px;
+        border-left: 5px solid #337ab7;
+        padding-left: 15px;
+    }
+
+        .step h3 {
+            font-size: 18px;
+            color: #337ab7;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+    .note {
+        background-color: #fdf5e6;
+        border-left: 5px solid #f39c12;
+        padding: 15px;
+        margin: 30px 0;
+        border-radius: 5px;
+        color: #8a6d3b;
+        font-size: 14px;
+    }
+
+    .bank-info {
+        background-color: #f9f9f9;
+        border: 1px dashed #ccc;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    .warranty {
+        background-color: #eafaf1;
+        border-left: 5px solid #27ae60;
+        padding: 15px;
+        margin-top: 30px;
+        border-radius: 5px;
+    }
+
+    .company-info {
+        margin-top: 40px;
+        border-top: 1px solid #eee;
+        padding-top: 30px;
+        font-size: 15px;
+        color: #444;
+    }
+
+        .company-info strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+    @@media (max-width: 768px) {
+        .guide-container
+
+    {
+        padding: 30px 15px;
+    }
+
+    .guide-container h1 {
+        font-size: 22px;
+    }
+
+    .step h3 {
+        font-size: 16px;
+    }
+
+    }
+</style>
+
+<div class="guide-container">
+    <h1>Hướng dẫn mua hàng từ xa tại LaptopGame</h1>
+
+    <div class="step">
+        <h3>Bước 1: Chọn sản phẩm</h3>
+        <p>Truy cập website và lựa chọn sản phẩm mà quý khách muốn mua.</p>
+    </div>
+
+    <div class="step">
+        <h3>Bước 2: Liên hệ tư vấn</h3>
+        <p>Liên hệ với nhân viên hỗ trợ qua chat trực tiếp trên website hoặc gọi đến số <strong>0826.982.799</strong>.</p>
+    </div>
+
+    <div class="step">
+        <h3>Bước 3: Nhận hình ảnh & mô tả sản phẩm</h3>
+        <p>Nhân viên gửi ảnh thật và mô tả chi tiết qua Email, Zalo hoặc Facebook để quý khách kiểm tra trước khi quyết định.</p>
+    </div>
+
+    <div class="step">
+        <h3>Bước 4: Xác nhận mua hàng</h3>
+        <p>Sau khi xem thông tin, quý khách xác nhận đồng ý mua sản phẩm.</p>
+    </div>
+
+    <div class="step">
+        <h3>Bước 5: Đặt cọc xác thực</h3>
+        <p>Quý khách chuyển khoản <strong>500.000 VNĐ</strong> hoặc <strong>thẻ cào trị giá 300.000 VNĐ</strong> để xác thực đơn hàng.</p>
+        <div class="bank-info">
+            <strong>Thông tin chuyển khoản:</strong>
+            Ngân hàng Agri Bank – Chủ tài khoản: <strong>LÊ QUỲNH GIANG</strong><br />
+            Số tài khoản: <strong>0826982799</strong><br />
+            <em>Nội dung: "Họ tên – đặt cọc laptop [tên máy]"</em>
+        </div>
+    </div>
+
+    <div class="step">
+        <h3>Bước 6: Giao hàng – kiểm tra – thanh toán</h3>
+        <p>Trong 2–5 ngày, nhân viên sẽ giao hàng tận nơi. Quý khách kiểm tra sản phẩm đúng mô tả rồi mới thanh toán phần còn lại.</p>
+        <ul style="line-height: 30px">
+            <li>- Miền Bắc: 2–3 ngày</li>
+            <li>- Miền Trung: 3–4 ngày</li>
+            <li>- Miền Nam: 4 ngày</li>
+        </ul>
+    </div>
+
+    <div class="note">
+        <strong>Lưu ý:</strong><br />
+        Nếu sản phẩm đúng như mô tả mà quý khách đổi ý không nhận hàng, quý khách sẽ phải chịu <strong>300.000 VNĐ</strong> phí vận chuyển. Nếu sản phẩm sai mô tả hoặc lỗi – chúng tôi hoàn lại tiền đặt cọc 100%.
+    </div>
+
+    <div class="warranty">
+        <h3>Chế độ bảo hành cho khách ở xa</h3>
+        <ul style="line-height: 30px">
+            <li>Hỗ trợ bảo hành tại địa phương nếu có đối tác.</li>
+            <li>Trong 7 ngày đầu, miễn phí <strong>cước 2 chiều</strong> nếu cần gửi về shop.</li>
+            <li>Hỗ trợ phần mềm từ xa qua <strong>TeamViewer</strong> (giờ hành chính).</li>
+        </ul>
+    </div>
+
+    <div class="company-info">
+        <strong>Cửa hàng bán sỉ lẻ máy tính, Pc và các phụ kiện đi kèm SMARTTECH</strong>
+        <p>Với hơn 5 năm kinh nghiệm, cam kết máy <strong>100% chưa sửa chữa</strong>, lỗi 1 đổi 1 trong thời hạn bảo hành.</p>
+        <p><strong>Địa chỉ:</strong> Số 24, ngõ 133 Phố Thái Hà – Đống Đa – Hà Nội</p>
+        <p><strong>HOTLINE:</strong> 0826.982.799</p>
+        <p><strong>Fanpage:</strong> <a href="https://facebook.com/laptopgame.vn" target="_blank">facebook.com/laptopgame.vn</a></p>
+    </div>
+</div>

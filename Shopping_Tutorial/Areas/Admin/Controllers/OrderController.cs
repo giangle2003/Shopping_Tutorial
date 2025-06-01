@@ -69,7 +69,7 @@ namespace Shopping_Tutorial.Areas.Admin.Controllers
                 return NotFound();
             }
             order.Status = status; // Cập nhật trạng thái đơn hàng
-            if(status == 2) // Nếu trạng thái là đã giao hàng
+            if(status == 4) // Nếu trạng thái là đã giao hàng
             {
                 var orderDetails = await _dataContext.OrderDetails.Where(od => od.OrderCode == ordercode).ToListAsync();
                 if (orderDetails != null && orderDetails.Count > 0)

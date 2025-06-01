@@ -42,59 +42,80 @@
 			<!--header_top-->
 			<div class="container">
 				<div class="row">
-				
+					<div class="col-sm-3">
+						<a asp-area="/" asp-controller="Home" asp-action="Index" class="active">
+							<h2 style="font-weight: bold; color: #007BFF; font-size: 30px; font-family: 'Segoe UI', sans-serif; letter-spacing: 1px;">
+								<i class="fa fa-cogs" style="margin-right: 8px;"></i>SMART<span style="color: #333;">TECH</span>
+							</h2>
+						</a>
+					</div>
+
 				</div>
 			</div>
 		</div><!--/header_top-->
 
-		<div class="header-middle">
-			<!--header-middle-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							
-
-							
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div><!--/header-middle-->
 
 		<div class="header-bottom">
 			<!--header-bottom-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-9">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
+					<div class="col-sm-12">
+						
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a asp-area="/" asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+								<li><a asp-area="/" asp-controller="Home" asp-action="Index" class="active">Trang chủ</a></li>
 								
-								<li><a asp-controller="Product" asp-action="Index">Sản phẩm</a></li>
-								<li><a asp-controller="ProductImage" asp-action="Index">Hình ảnh sản phẩm</a></li>
-								<li><a asp-controller="Category" asp-action="Index">Danh mục</a></li>
-								<li><a asp-controller="Brand" asp-action="Index">Thương Hiệu</a></li>
+								<li class="dropdown">
+									<a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
+										Quản lý sản phẩm<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li style="padding-left: 15px"><a asp-controller="Product" asp-action="Index">Sản phẩm</a></li>
+										<li><a asp-controller="ProductImage" asp-action="Index">Hình ảnh sản phẩm</a></li>
+										<li><a asp-controller="Color" asp-action="Index">Màu sắc</a></li>
+									</ul>
+								</li>
+
+								<li class="dropdown">
+									<a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
+										Danh mục & Thương hiệu<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li style="padding-left: 15px"><a asp-controller="Category" asp-action="Index">Danh mục</a></li>
+										<li><a asp-controller="Brand" asp-action="Index">Thương Hiệu</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
+										Quản lý Người dùng<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li style="padding-left: 15px"><a asp-controller="Role" asp-action="Index">Phân quyền</a></li>
+										<li><a asp-controller="User" asp-action="Index">Người dùng</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a style="cursor:pointer" class="dropdown-toggle" data-toggle="dropdown">
+										Quản lý ưu đãi & vận chuyển<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li style="padding-left: 15px"><a asp-controller="Shipping" asp-action="Index">Phí ship</a></li>
+										<li><a asp-controller="Coupon" asp-action="Index">Giảm giá</a></li>
+									</ul>
+								</li>
+
+								@* <li><a asp-controller="Product" asp-action="Index">Sản phẩm</a></li> *@
+								@* <li><a asp-controller="ProductImage" asp-action="Index">Hình ảnh sản phẩm</a></li> *@
+								@* <li><a asp-controller="Category" asp-action="Index">Danh mục</a></li> *@
+								@* <li><a asp-controller="Brand" asp-action="Index">Thương Hiệu</a></li> *@
 								<li><a asp-controller="Slider" asp-action="Index">Slider</a></li>
 								<li><a asp-controller="Order" asp-action="Index">Đơn hàng</a></li>
-								<li><a asp-controller="User" asp-action="Index">Người dùng</a></li>
-								<li><a asp-controller="Role" asp-action="Index">Phân quyền</a></li>
+								@* <li><a asp-controller="User" asp-action="Index">Người dùng</a></li> *@
+								@* <li><a asp-controller="Role" asp-action="Index">Phân quyền</a></li> *@
 								<li><a asp-controller="Contact" asp-action="Index">Liên hệ</a></li>
-								<li><a asp-controller="Shipping" asp-action="Index">Phí ship</a></li>
-								<li><a asp-controller="Coupon" asp-action="Index">Giảm giá</a></li>
-								<li><a asp-controller="Color" asp-action="Index">Màu sắc</a></li>
+								@* <li><a asp-controller="Shipping" asp-action="Index">Phí ship</a></li> *@
+								@* <li><a asp-controller="Coupon" asp-action="Index">Giảm giá</a></li> *@
+								@* <li><a asp-controller="Color" asp-action="Index">Màu sắc</a></li> *@
 								<li><a asp-controller="Dashboard" asp-action="Index">Thống kê</a></li>
 							</ul>
 						</div>

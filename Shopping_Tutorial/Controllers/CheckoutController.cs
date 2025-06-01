@@ -34,7 +34,10 @@ namespace Shopping_Tutorial.Controllers
             _vnPayService = vnPayService;
         }
 
-        public async Task<IActionResult> Checkout(string OrderId, string fullAddress, string phoneNumber)
+
+
+
+        public async Task<IActionResult> Checkout(string OrderId,string MethodPayment ,string fullAddress, string phoneNumber)
         {
             try
             {
@@ -64,7 +67,7 @@ namespace Shopping_Tutorial.Controllers
                     PhonenumberDelivery = phoneNumber,
                     UserName = userEmail,
                     CreatedDate = DateTime.Now,
-                    PaymentMethod = string.IsNullOrEmpty(OrderId) ? "COD" : OrderId,
+                    PaymentMethod = string.IsNullOrEmpty(OrderId) ? "COD" : MethodPayment,
                     Status = 1
                 };
 
@@ -153,6 +156,9 @@ namespace Shopping_Tutorial.Controllers
                 _dataContext.CartItems.RemoveRange(cartItems);
                 await _dataContext.SaveChangesAsync();
 
+               
+
+
                 // Gửi email xác nhận đơn hàng
                 string emailBody = await RenderViewToStringAsync("Emails/OrderEmail", orderDetailsList);
                 await _emailSender.SendEmailAsync(userEmail, "Đơn hàng mới", emailBody);
@@ -161,7 +167,9 @@ namespace Shopping_Tutorial.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Lỗi khi checkout: {ex.Message}");
+                string errorMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                TempData["CheckoutError"] = "Đã xảy ra lỗi khi thanh toán: " + errorMsg;
+                Console.WriteLine($"Chi tiết lỗi: {errorMsg}");
                 return RedirectToAction("Fail", "Checkout");
             }
         }
@@ -210,7 +218,9 @@ namespace Shopping_Tutorial.Controllers
                 }
                 //Đặt hàng sau khi thanh toán thành công
 
-                var checkoutResult = await Checkout(orderId, fullAddress, phoneNumber);
+                var methodPayment = "MOMO";
+
+                var checkoutResult = await Checkout(orderId,methodPayment ,fullAddress, phoneNumber);
 
                 if (checkoutResult is RedirectToActionResult redirectResult)
                 {
@@ -245,11 +255,39 @@ namespace Shopping_Tutorial.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult PaymentCallbackVnpay()
+        public async Task<IActionResult> PaymentCallbackVnpay()
         {
             var response = _vnPayService.PaymentExecute(Request.Query);
+            if (response.VnPayResponseCode == "00")
+            {
+                var newVnpayInsert = new VnpayModel
+                {
+                    OrderId = response.OrderId,
+                    OrderDescription = response.OrderDescription,
+                    PaymentMethod = response.PaymentMethod,
+                    TransactionId = response.TransactionId,
+                    PaymentId = response.PaymentId,
+                    DateCreated = DateTime.Now
+                };
+                _dataContext.Add(newVnpayInsert);
+                await _dataContext.SaveChangesAsync();
 
-            return Json(response);
+                var fullAddress = Request.Cookies["FullAddress"]?.Trim();
+                var phoneNumber = Request.Cookies["PhoneNumber"]?.Trim();
+
+                
+                //Đặt hàng sau khi thanh toán thành công
+                var paymentmethod = response.PaymentId;
+                var methodPayment = response.PaymentMethod;
+                var checkoutResult = await Checkout(paymentmethod,methodPayment ,fullAddress, phoneNumber);
+            }
+            else
+            {
+                return RedirectToAction("PaymentFail", "Checkout");
+            }
+            //return Json(response);
+            //return View(response);
+            return RedirectToAction("Success", "Checkout");
         }
 
         //Để chuyển view thành string

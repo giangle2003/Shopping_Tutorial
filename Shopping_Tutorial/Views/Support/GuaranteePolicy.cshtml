@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Chính sách bảo hành, đổi trả";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .warranty-policy {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+        .warranty-policy h1 {
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+    .toc {
+        background-color: #f0f8ff;
+        border-left: 5px solid #27ae60;
+        padding: 20px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+
+        .toc h4 {
+            color: #27ae60;
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+            .toc ul li {
+                margin: 8px 0;
+            }
+
+                .toc ul li a {
+                    color: #27ae60;
+                    text-decoration: none;
+                }
+
+                    .toc ul li a:hover {
+                        text-decoration: underline;
+                    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+        .section h3 {
+            color: #27ae60;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .section p, .section li {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .section ul {
+            padding-left: 20px;
+        }
+
+    .contact-box {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-left: 5px solid #3498db;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+</style>
+
+<div class="warranty-policy">
+    <h1>Chính sách bảo hành, đổi trả</h1>
+
+    <!-- MỤC LỤC -->
+    <div class="toc">
+        <h4>Mục lục</h4>
+        <ul>
+            <li><a href="#gioithieu">I. Chính sách bảo hành</a></li>
+            <li><a href="#lienhe">II. Thông tin hỗ trợ</a></li>
+        </ul>
+    </div>
+
+    <!-- NỘI DUNG -->
+    <div id="gioithieu" class="section">
+        <h3>I. Chính Sách Bảo Hành</h3>
+        <p>Kính gửi Quý khách hàng,</p>
+
+        <p><strong>SMARTTECH</strong> xin chân thành cảm ơn Quý khách đã tin tưởng và lựa chọn 1P làm nơi gửi trọn niềm tin cho dù trên thị trường có rất nhiều sự lựa chọn. Với mục tiêu mang đến sự hài lòng tối đa, chúng tôi luôn cam kết cung cấp những sản phẩm chất lượng nhất, cùng dịch vụ hậu mãi tận tâm và chuyên nghiệp. Mỗi khách hàng đến với chúng tôi đều là khách hàng thân thiết. Mỗi sản phẩm bán ra đều đi kèm với những cam kết và dịch vụ sau bán hàng tốt nhất.</p>
+
+        <p>Chính sách bảo hành này được xây dựng với mục tiêu bảo vệ quyền lợi của Quý khách và sự hài lòng cao nhất trong quá trình sử dụng sản phẩm, đồng thời đảm bảo sản phẩm được sử dụng hiệu quả và bền bỉ theo thời gian. Các quy định trong chính sách sẽ giúp Quý khách hiểu rõ quyền lợi bảo hành cũng như quy trình xử lý khi cần thiết.</p>
+
+        <p>Chúng tôi rất mong nhận được sự hợp tác và phản hồi của Quý khách để không ngừng cải thiện chất lượng dịch vụ. Sự hài lòng và tín nhiệm của Quý khách là nguồn động lực to lớn để chúng tôi không ngừng nâng cao chất lượng dịch vụ.</p>
+    </div>
+
+    <div id="lienhe" class="section contact-box">
+        <h3>II. Thông tin hỗ trợ</h3>
+        <p>Nếu cần hỗ trợ hoặc có bất kỳ thắc mắc nào, Quý khách vui lòng liên hệ với chúng tôi qua:</p>
+        <ul>
+            <li><strong>Số điện thoại/Tổng đài:</strong> 0826.982.788</li>
+            <li><strong>Email hỗ trợ:</strong> smarttechvn@gmail.com</li>
+        </ul>
+        <p>Trân trọng!</p>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Cuộn mượt khi nhấn mục lục
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var target = this.hash;
+            var $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 30
+            }, 600, 'swing');
+        });
+    </script>
+}

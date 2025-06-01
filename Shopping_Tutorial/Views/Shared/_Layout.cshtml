@@ -51,8 +51,7 @@
 		<div class="header_top">
 			<!--header_top-->
 			<div class="container">
-				<div class="row">
-					
+				<div class="row">					
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
@@ -81,9 +80,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-3">
-						<h2 style="font-weight: bold; color: #007BFF; font-size: 30px; font-family: 'Segoe UI', sans-serif; letter-spacing: 1px;">
-							<i class="fa fa-cogs" style="margin-right: 8px;"></i>SMART<span style="color: #333;">TECH</span>
-						</h2>
+						<a asp-area="/" asp-controller="Home" asp-action="Index" class="active">
+							<h2 style="font-weight: bold; color: #007BFF; font-size: 30px; font-family: 'Segoe UI', sans-serif; letter-spacing: 1px;">
+								<i class="fa fa-cogs" style="margin-right: 8px;"></i>SMART<span style="color: #333;">TECH</span>
+							</h2>
+						</a>
 					</div>
 
 					<div class="col-sm-9 flex-center">
@@ -92,7 +93,7 @@
 								<li><a asp-action="Cart" asp-controller="Cart"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
 								@if (User.Identity?.IsAuthenticated ?? false)
 								{
-									<li><a asp-action="Cart" asp-controller="Cart"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+									@* <li><a asp-action="Cart" asp-controller="Cart"><i class="fa fa-crosshairs"></i> Checkout</a></li> *@
 									<li><a asp-action="Wishlist" asp-controller="Home"><i class="fa fa-heart"></i> Yêu thích</a></li>
 									<li><a asp-action="Compare" asp-controller="Home"><i class="fa fa-heart"></i> So sánh</a></li>
 									<li class="dropdown">
@@ -141,6 +142,19 @@
 
 
                                 <li><a asp-controller="Home" asp-action="Contact"><b>Liên hệ</b></a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<b>Hỗ trợ</b><i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu support-dropdown">
+										<li><a class="dropdown-item" asp-controller="Support" asp-action="TermsofUse"><i class="fa fa-list" style="padding-left: 15px"></i> Điều khoản giao dịch chung</a></li>
+										<li><a class="dropdown-item" asp-controller="Support" asp-action="ShippingPolicy"><i class="fa fa-folder"></i> Chính sách vận chuyển</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Support" asp-action="GuaranteePolicy"><i class="fa fa-tags"></i>  Chính sách bảo hành</a></li>
+										<li><a asp-controller="Support" asp-action="SupportBuyProduct"><i class="fa fa-tags"></i> Hướng dẫn mua hàng từ xa</a></li>
+
+									</ul>
+								</li>
+								<li><a asp-controller="Support" asp-action="Introduce"><b>Giới thiệu</b></a></li>
 							</ul>
 						</div>
 					</div>
@@ -167,72 +181,7 @@
 	<footer id="footer">
 		<!--Footer-->
         <partial name="_FooterPartial" />
-@* 		<div class="footer-widget">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Quock Shop</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">T-Shirt</a></li>
-								<li><a href="#">Mens</a></li>
-								<li><a href="#">Womens</a></li>
-								<li><a href="#">Gift Cards</a></li>
-								<li><a href="#">Shoes</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Policies</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privecy Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">Billing System</a></li>
-								<li><a href="#">Ticket System</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">Store Location</a></li>
-								<li><a href="#">Affillate Program</a></li>
-								<li><a href="#">Copyright</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-sm-offset-1">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-							</form>
-						</div>
-					</div>
 
-				</div>
-			</div>
-		</div>
- *@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
@@ -256,7 +205,8 @@
 	<div id="fb-root"></div>
 	<script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"></script>	@await RenderSectionAsync("Scripts", required: false)
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"></script>	
+	@await RenderSectionAsync("Scripts", required: false)
 	<script>
 		$(document).ready(function () {
 			let table = $('#myTable').DataTable({

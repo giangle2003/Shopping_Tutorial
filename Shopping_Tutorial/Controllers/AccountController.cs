@@ -13,6 +13,7 @@ using Shopping_Tutorial.Models.ViewModels;
 using Shopping_Tutorial.Repository;
 using System.Security.Claims;
 using Shopping_Tutorial.Services.Cart;
+using System.Globalization;
 
 namespace Shopping_Tutorial.Controllers
 {
@@ -63,7 +64,7 @@ namespace Shopping_Tutorial.Controllers
         }
 
 
-        public async Task<IActionResult> History(int? status)
+        public async Task<IActionResult> History(int? status,DateTime? fromDate, DateTime? toDate)
         {
             //Kiểm tra nếu chưa đăng nhập quay về trang đăng nhập
             if ((bool)!User.Identity.IsAuthenticated)
@@ -78,20 +79,38 @@ namespace Shopping_Tutorial.Controllers
 
 
             //Lấy danh sách đơn hàng của người dùng
-            var orders = await _dataContext.Orders
+            var orders = _dataContext.Orders
                 .Where(o => o.UserName == userEmail)
                 .OrderByDescending(o => o.Id)
-                .ToListAsync();
-
+                .AsQueryable();
+            //Lọc theo trạng thái
             if (status.HasValue)
             {
-                orders = orders.Where(o => o.Status == status.Value).ToList();
+                orders = orders.Where(o => o.Status == status.Value);
                 ViewBag.Filter = status;
             }
+
+            //Lọc theo ngày mua
+            if (fromDate.HasValue)
+            {
+                orders = orders.Where(o => o.CreatedDate >= fromDate.Value);
+                ViewBag.FromDate = fromDate.Value.ToString("yyyy-MM-dd");
+            }
+
+            if (toDate.HasValue)
+            {
+                var endOfDay = toDate.Value.Date.AddDays(1).AddSeconds(-1);
+                orders = orders.Where(o => o.CreatedDate <= endOfDay);
+                ViewBag.ToDate = toDate.Value.ToString("yyyy-MM-dd");
+            }
+
+            var ordersQuery = await orders.ToListAsync();
+
+
             ViewBag.UserEmail = userEmail;
             
 
-            return View(orders);
+            return View(ordersQuery);
         }
 
         //Hủy đơn hàng

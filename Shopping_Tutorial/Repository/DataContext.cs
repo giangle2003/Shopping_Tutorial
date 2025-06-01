@@ -32,6 +32,7 @@ namespace Shopping_Tutorial.Repository
         public DbSet<CartItemModel> CartItems { get; set; }
         public DbSet<CouponCategory> CouponCategories { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<VnpayModel> VnpayInfors { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductColor>()

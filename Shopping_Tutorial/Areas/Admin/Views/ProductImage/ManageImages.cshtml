@@ -17,11 +17,12 @@
     @foreach (var img in Model)
     {
         <div class="col-md-3" id="image_@img.Id" style="margin-bottom: 20px;">
-            <img src="@img.ImagePath" width="100%" />
+            <img src="@img.ImagePath" width="100%" height="300px" />
             <button class="btn btn-danger btn-block btnDeleteImage" data-id="@img.Id">Xóa ảnh</button>
         </div>
     }
 </div>
+<a asp-action="Index" class="custom-back-btn"><i class="fa-solid fa-arrow-left"></i> Trở về trang Danh sách</a>
 
 @section Scripts {
     <script>

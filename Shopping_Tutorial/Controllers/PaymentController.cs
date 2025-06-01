@@ -38,8 +38,16 @@ namespace Shopping_Tutorial.Controllers
             var response = _momoService.PaymentExecuteAsync(HttpContext.Request.Query);
             return View(response);
         }
-        public IActionResult CreatePaymentUrlVnpay(PaymentInformationModel model)
+        public IActionResult CreatePaymentUrlVnpay(PaymentInformationModel model, string fullAddress, string phoneNumber)
         {
+            Response.Cookies.Append("FullAddress", fullAddress, new CookieOptions
+            {
+                Expires = DateTimeOffset.Now.AddMinutes(30)
+            });
+            Response.Cookies.Append("PhoneNumber", phoneNumber, new CookieOptions
+            {
+                Expires = DateTimeOffset.Now.AddMinutes(30)
+            });
             var url = _vnPayService.CreatePaymentUrl(model, HttpContext);
 
             return Redirect(url);

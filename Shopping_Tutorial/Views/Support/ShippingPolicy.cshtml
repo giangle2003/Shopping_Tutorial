@@ -1,0 +1,157 @@
+﻿@{
+    ViewData["Title"] = "Chính sách vận chuyển";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .shipping-policy {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+        .shipping-policy h1 {
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+    .toc {
+        background-color: #f0f8ff;
+        border-left: 5px solid #2980b9;
+        padding: 20px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+
+        .toc h4 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+            .toc ul li {
+                margin: 8px 0;
+            }
+
+                .toc ul li a {
+                    color: #2980b9;
+                    text-decoration: none;
+                }
+
+                    .toc ul li a:hover {
+                        text-decoration: underline;
+                    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+        .section h3 {
+            color: #2980b9;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .section p, .section li {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .section ul {
+            padding-left: 20px;
+        }
+
+    .contact-box {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-left: 5px solid #3498db;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+</style>
+
+<div class="shipping-policy">
+    <h1>Chính sách vận chuyển</h1>
+
+    <!-- MỤC LỤC -->
+    <div class="toc">
+        <h4>Mục lục</h4>
+        <ul>
+            <li><a href="#giaonhan">1. Giao nhận hàng</a></li>
+            <li><a href="#chiphi">2. Chi phí giao hàng</a></li>
+            <li><a href="#trachnhiem">3. Trách nhiệm của SMARTTECH</a></li>
+            <li><a href="#quydinh">4. Các quy định khác</a></li>
+            <li><a href="#lienhe">5. Thông tin liên hệ</a></li>
+        </ul>
+    </div>
+
+    <!-- NỘI DUNG -->
+    <div id="giaonhan" class="section">
+        <h3>1. Thông tin về Giao nhận hàng</h3>
+        <p>Hiện tại SMARTTECH có 3 phương thức giao hàng: Giao hàng tận nơi, nhận tại cửa hàng, giao hàng qua đối tác vận chuyển.</p>
+        <p><strong>Phạm vi:</strong> Giao hàng toàn quốc.</p>
+        <p><strong>Thời gian giao hàng:</strong></p>
+        <ul>
+            <li>Nội thành Hà Nội: <strong>2 giờ</strong> sau khi xác nhận đơn hàng.</li>
+            <li>Các tỉnh khác: <strong>2–7 ngày</strong> tùy khoảng cách, vị trí.</li>
+        </ul>
+    </div>
+
+    <div id="chiphi" class="section">
+        <h3>2. Chi phí giao hàng</h3>
+        <ul>
+            <li>Miễn phí giao hàng nội thành Hà Nội trong bán kính 15km (không áp dụng cho phụ kiện).</li>
+            <li>Trên 15km: Phí vận chuyển sẽ được thỏa thuận hợp tác giữa hai bên.</li>
+        </ul>
+    </div>
+
+    <div id="trachnhiem" class="section">
+        <h3>3. Trách nhiệm của SMARTTECH với hàng hoá vận chuyển</h3>
+        <ul>
+            <li>Dịch vụ vận chuyển do SMARTTECH chỉ định sẽ chịu trách nhiệm nếu có mất mát, hư hại.</li>
+            <li>Khách hàng cần kiểm tra hàng trước khi ký nhận.</li>
+            <li>Khuyến khích quay video khi mở hàng để bảo vệ quyền lợi.</li>
+            <li>Sau khi đã ký nhận mà không ghi chú, SMARTTECH không chịu trách nhiệm các khiếu nại sau này.</li>
+            <li>Nếu khách chọn đơn vị vận chuyển riêng, khách hàng tự chịu rủi ro và chi phí phát sinh.</li>
+        </ul>
+    </div>
+
+    <div id="quydinh" class="section">
+        <h3>4. Các quy định khác</h3>
+        <ul>
+            <li>SMARTTECH có quyền từ chối giao hàng đến vùng hẻo lánh, nguy hiểm.</li>
+            <li>Không chịu trách nhiệm nếu chậm giao do thiên tai, lũ lụt, cấm đường...</li>
+            <li>Nếu khách yêu cầu trả hàng, sẽ chịu chi phí vận chuyển theo biểu giá.</li>
+            <li>Ngày lễ hoặc cấm đường: Thời gian giao hàng có thể thay đổi và sẽ được thông báo.</li>
+        </ul>
+    </div>
+
+    <div id="lienhe" class="section contact-box">
+        <h3>5. Thông tin liên hệ</h3>
+        <p><strong>Công ty cổ phần SMARTTECH</strong></p>
+        <p><strong>Địa chỉ:</strong> Số 33 Nguyễn Văn Tuyết, Phường Ngã Tư Sở, Đống Đa, Hà Nội</p>
+        <p><strong>Hotline:</strong> 0965 505 661</p>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Cuộn mượt khi nhấn vào mục lục
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var target = this.hash;
+            var $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 30
+            }, 600, 'swing');
+        });
+    </script>
+}

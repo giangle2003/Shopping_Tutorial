@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Shopping_Tutorial.Models
 {
@@ -12,7 +13,8 @@ namespace Shopping_Tutorial.Models
         public int Quantity { get; set; }
 
         public DateTime OrderDate { get; set; } //Thêm ngày đặt hàng
-        public string Name { get; set; } //Tên người nhận
+        [MaxLength(255)]
+        public string Name { get; set; } //Tên sản phẩm
         public decimal ImportPrice { get; set; }  // Giá nhập
 
         [ForeignKey("ProductId")]

@@ -14,19 +14,20 @@
     }
 }
 <partial name="_SliderPartial" />
-<div class="col-sm-3">
-    <partial name="_SidebarPartial" />
-</div>
-<div class="col-sm-9 padding-right">
+<div class="row">
+    <div class="col-sm-3">
+        <partial name="_SidebarPartial" />
+    </div>
+    <div class="col-sm-9 padding-right">
 
-    <div class="features_items">
-        <!--features_items-->
-        <h2 class="title text-center">Features Items</h2>
+        <div class="features_items">
+            <!--features_items-->
+            <h2 class="title text-center">SẢN PHẨM</h2>
 
-        @foreach (var item in Model)
-        {
-            <div class="col-sm-4">
-                <div class="product-image-wrapper">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
 
                     <div class="single-products">
                         <div class="productinfo text-center">
@@ -70,9 +71,14 @@
                         }
                     </div>
                 </div>
-            </div>
-        }
-    </div><!--features_items-->
+                </div>
+            }
+        </div>
+       
+    </div>
+    
+</div>
+<div class="text-center" style="max-width: 400px">
     <partial name="_Paging" model="@pager" />
 </div>
 @section scripts {

@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<OrderModel>
 
 @{
-    ViewData["Title"] = "List Orders History" + @ViewBag.UserEmail;
+    ViewData["Title"] = "Lịch sử đơn hàng - " + ViewBag.UserEmail;
     int stt = 1;
 }
+<link href="~/css/site.css" rel="stylesheet" type="text/css" />
 
-    <h3>Danh sách đơn hàng đã mua</h3>
+<h3 class="text-primary" style="text-align: center">Danh sách đơn hàng đã mua</h3>
+
 <ul class="nav nav-pills" style="margin-bottom: 20px;">
-   
     <li role="presentation" class="@(ViewBag.Filter == 1 ? "active" : "")">
         <a asp-action="History" asp-controller="Account" asp-route-status="1">Chờ xác nhận</a>
     </li>
@@ -25,14 +26,37 @@
     </li>
 </ul>
 
-    <table class="table" id="myTable">
+@using (Html.BeginForm("History", "Account", FormMethod.Get))
+{
+    <input type="hidden" name="status" value="@ViewBag.Filter" />
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col-md-3">
+            <label>Từ ngày</label>
+            <input type="date" name="fromDate" class="form-control" value="@ViewBag.FromDate" />
+        </div>
+        <div class="col-md-3">
+            <label>Đến ngày</label>
+            <input type="date" name="toDate" class="form-control" value="@ViewBag.ToDate" />
+        </div>
+        <div class="col-md-3" style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary">
+                Lọc
+            </button>
+        </div>
+    </div>
+}
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover text-center" id="myTable">
         <thead>
-            <tr>
+            <tr class="active">
                 <th>STT</th>
                 <th>Mã đơn</th>
                 <th>Ngày mua</th>
                 <th>Trạng thái</th>
-                <th>Lựa chọn</th>
+                <th>Thanh toán</th>
+                <th>Hành động</th>
             </tr>
         </thead>
         <tbody>
@@ -40,64 +64,59 @@
             {
                 <tr>
                     <td>@stt</td>
-                    <td>@item.OrderCode</td>
+                    <td><strong>@item.OrderCode</strong></td>
                     <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
                     <td>
                         @if (item.Status == 1)
                         {
-                        <span class="label label-success">Đơn hàng mới</span>
+                            <span class="label label-success">Chờ xác nhận</span>
                         }
                         else if (item.Status == 0)
                         {
-                            <span class="label label-warning">Đơn hàng xử lý</span>
+                            <span class="label label-warning">Chờ xử lý</span>
                         }
                         else if (item.Status == 2)
                         {
-                            <span class="label label-info">Đơn hàng đang giao</span>
+                            <span class="label label-info">Đang giao</span>
                         }
                         else if (item.Status == 4)
                         {
-
                             <span class="label label-primary">Đã nhận</span>
                         }
                         else if (item.Status == 3)
                         {
-
                             <span class="label label-danger">Đã hủy</span>
                         }
                     </td>
-                <td>
-                    @if (item.Status == 0 || item.Status == 1)
-                    {
-                                <a class="btn btn-primary btn-sm"
-                                    asp-action="DetailOrder"
-                                    asp-controller="Account"
-                                    asp-route-ordercode="@item.OrderCode">
-                                    Chi tiết đơn hàng
-                                </a>
-                            <a onclick="return confirm('Bạn xác nhận muốn hủy?')"
-                               class="btn btn-danger btn-sm"
-                               asp-action="CancelOrder"
+                    <td>@item.PaymentMethod</td>
+                    <td>
+                        @if (item.Status == 0 || item.Status == 1)
+                        {
+                            <a class="btn btn-xs btn-info"
+                               asp-action="DetailOrder"
                                asp-controller="Account"
                                asp-route-ordercode="@item.OrderCode">
-                               Hủy đơn hàng
-                           </a>
-
-                           
-                    }
-                    else if (item.Status == 2)
-                    {
-                        <a class="btn btn-success btn-sm"
-                           asp-action="ReceiveOrder"
-                           asp-controller="Account"
-                           asp-route-ordercode="@item.OrderCode">Đã nhận</a>
-                    }
-                    
-                </td>
-
+                               Chi tiết
+                            </a>
+                            <a class="btn btn-xs btn-danger"
+                               onclick="return confirm('Bạn xác nhận muốn hủy?')"
+                               asp-action="CancelOrder"
+                               asp-controller="Account"
+                               asp-route-ordercode="@item.OrderCode"> Hủy                             
+                            </a>
+                        }
+                        else if (item.Status == 2)
+                        {
+                            <a class="btn btn-xs btn-success"
+                               asp-action="ReceiveOrder"
+                               asp-controller="Account"
+                               asp-route-ordercode="@item.OrderCode">Đã nhận
+                            </a>
+                        }
+                    </td>
                 </tr>
-            stt++;
+                stt++;
             }
         </tbody>
     </table>
-
+</div>

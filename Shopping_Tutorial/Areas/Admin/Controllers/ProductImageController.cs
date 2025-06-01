@@ -30,7 +30,8 @@ namespace Shopping_Tutorial.Areas.Admin.Controllers
                 {
                     p.Id,
                     p.Name,
-                    p.Image
+                    Image = "/media/products/" + p.Image // Tạo đường dẫn đầy đủ ở đây
+
                 })
                 .ToListAsync();
 

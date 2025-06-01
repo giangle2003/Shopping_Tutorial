@@ -180,6 +180,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\responsive.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>css/site.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8623nx6rw8</Fingerprint>
+      <Integrity>QBfG30bsGGmvLHsDMjQIFGLj83O4kcNFXFvREZGgnv8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Star.css'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -1638,6 +1656,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\03c0610c-0781-4d29-8bf7-8bc69ab4f8e2.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\046d6350-45e6-46d4-b07c-d0c30f2e9c90.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/046d6350-45e6-46d4-b07c-d0c30f2e9c90.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7yxxwzu6vh</Fingerprint>
+      <Integrity>4emivQngbQKJ46n+gwxyzMkn58a8CIgjgDUzi8byhlI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\046d6350-45e6-46d4-b07c-d0c30f2e9c90.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\06acd640-d980-434e-9b69-39f25aa0023e-lt_2.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -1656,6 +1692,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\06acd640-d980-434e-9b69-39f25aa0023e-lt_2.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\07551602-38a9-494a-8cee-7fbbcc40f5ed.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/07551602-38a9-494a-8cee-7fbbcc40f5ed.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nmexpve585</Fingerprint>
+      <Integrity>T32YxlY9QCJDIN1nKpa2eape7cq/pub7FZekZTsPh7M=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\07551602-38a9-494a-8cee-7fbbcc40f5ed.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\08bec505-43d9-4df8-854e-80812c8c4823.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/08bec505-43d9-4df8-854e-80812c8c4823.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>h9mbetygqu</Fingerprint>
+      <Integrity>izg2p09CsnLoFvW0LBeBOR9oPcIzMLOy+T/zNzfj0oo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\08bec505-43d9-4df8-854e-80812c8c4823.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\0962e209-91f1-4ea1-88f3-3b0e9c30442c-pc_2.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -1673,6 +1745,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\0962e209-91f1-4ea1-88f3-3b0e9c30442c-pc_2.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\0a29afd1-46f2-4686-9ab0-28afb88bedf6.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/0a29afd1-46f2-4686-9ab0-28afb88bedf6.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>q5ko78n69g</Fingerprint>
+      <Integrity>DvPyiJNQHEIJAPLKoWHbWF0rcvi7KkMMQRMskI3DdUY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\0a29afd1-46f2-4686-9ab0-28afb88bedf6.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\0a452759-9384-4bb8-b5e7-7d3e332c268b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/0a452759-9384-4bb8-b5e7-7d3e332c268b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ydf3w20cxa</Fingerprint>
+      <Integrity>pthP+ow4Z8NiMATe7Dr0+xzS7+8zX4RgZgKCxyazHFk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\0a452759-9384-4bb8-b5e7-7d3e332c268b.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\0c572aff-04c2-44b5-9e99-3bfef36f35b9-tl5.webp'))">
       <SourceType>Package</SourceType>
@@ -1710,6 +1818,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\11842811-464c-4e37-9770-aa2f0a96fbbb-pk19.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\12146fa7-a735-4bd8-ae03-4c5d7c0e5fe5.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/12146fa7-a735-4bd8-ae03-4c5d7c0e5fe5.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ik9v9zbsiy</Fingerprint>
+      <Integrity>MgfA3X0pxfM6nfyams38hKTepOXVZefmEYs4knQRSMU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\12146fa7-a735-4bd8-ae03-4c5d7c0e5fe5.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\15293c57-d63a-4a55-9344-5c7e5e9ea1b8-pc_4.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -1727,6 +1853,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\15293c57-d63a-4a55-9344-5c7e5e9ea1b8-pc_4.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\16cfe216-c4e6-4a65-9d1f-b4d86ea0dd6c.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/16cfe216-c4e6-4a65-9d1f-b4d86ea0dd6c.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ik9v9zbsiy</Fingerprint>
+      <Integrity>MgfA3X0pxfM6nfyams38hKTepOXVZefmEYs4knQRSMU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\16cfe216-c4e6-4a65-9d1f-b4d86ea0dd6c.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\175fd64f-00ca-434e-a634-2beb7346d0ba.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/175fd64f-00ca-434e-a634-2beb7346d0ba.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>54m0mqwvky</Fingerprint>
+      <Integrity>9a0wiFeM1I52Ahwvgk2TT9DoCjL39QeFoPBNim18xOs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\175fd64f-00ca-434e-a634-2beb7346d0ba.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\178b3af1-4d22-4c95-8c8a-fa3504a80bd6-pk26.webp'))">
       <SourceType>Package</SourceType>
@@ -1764,6 +1926,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\18304781-f480-4f98-a466-c181fe3c24a6-pk9.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\192a174f-eb79-41c2-891f-30a6e5a15cd8.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/192a174f-eb79-41c2-891f-30a6e5a15cd8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ay883fvqlp</Fingerprint>
+      <Integrity>rjGvF/JWQpH8tXzOstMY8LyyeRMvMN4uDnApQpIsIDo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\192a174f-eb79-41c2-891f-30a6e5a15cd8.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -1781,6 +1961,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\22acfef2-0309-447e-babb-09ba085f15f6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/22acfef2-0309-447e-babb-09ba085f15f6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vw7zf53ids</Fingerprint>
+      <Integrity>MZpGg+0R3ivoYOWk0jSvX8BKztsp0q/cF07gHbin2nE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\22acfef2-0309-447e-babb-09ba085f15f6.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\22db5c7f-696f-4498-9c41-f88334f8e289-lt5.jpg'))">
       <SourceType>Package</SourceType>
@@ -1854,6 +2052,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2d5ffa53-1ebf-4c1c-8d7c-e9de7ed6af0c-lk10.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2d65de95-fece-4067-8652-37a6b867a532-pk31.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/2d65de95-fece-4067-8652-37a6b867a532-pk31.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6rdias5ixz</Fingerprint>
+      <Integrity>3t/fZiEcjOj9aw5TVYg6y1mY/k5d48iTCNH6TuTlFLI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2d65de95-fece-4067-8652-37a6b867a532-pk31.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2e7dd1cf-09f8-4336-a186-7a2d7d28ac15-lk3.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -1890,6 +2106,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2ff5d804-85e7-445a-b637-a73382330702-pk20.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\300682ff-e59f-4a9f-982a-ed5469ad917c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/300682ff-e59f-4a9f-982a-ed5469ad917c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yzcw3pzn67</Fingerprint>
+      <Integrity>zuCmL7H71NoGLA5Z8QXouRHvSPmTDyL0+0ASu3hIYUU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\300682ff-e59f-4a9f-982a-ed5469ad917c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3428af05-e096-4bce-8078-6921d2cadef6-pk11.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -1907,6 +2141,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3428af05-e096-4bce-8078-6921d2cadef6-pk11.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\36268c24-5f56-4753-915b-5223a81c7326.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/36268c24-5f56-4753-915b-5223a81c7326.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gylxh15a2p</Fingerprint>
+      <Integrity>mO2JEDJookTEyejzLe9GMwFMZ51AGKaBv6dZ2hAy3go=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\36268c24-5f56-4753-915b-5223a81c7326.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3b4c5aa3-2d31-45ce-9a55-9d14193a5295-tl2.webp'))">
       <SourceType>Package</SourceType>
@@ -2052,6 +2304,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\5087ea2c-c48f-4c24-861c-2e735bf0cdb9-Air_M1_ARM.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\51420dff-4abb-467a-89af-31abed8a442d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/51420dff-4abb-467a-89af-31abed8a442d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vw7zf53ids</Fingerprint>
+      <Integrity>MZpGg+0R3ivoYOWk0jSvX8BKztsp0q/cF07gHbin2nE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\51420dff-4abb-467a-89af-31abed8a442d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\52e40825-1a50-4ded-b85c-ff11bc38d4f3-pk17.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -2106,23 +2376,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\6204f6ae-3116-476d-bb16-ed4041a2bc63-pc_1.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\63f9f301-a0ac-4246-9e1c-d56694b075bb-laptop_1.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\67eaf37a-0a31-4d99-9cdc-5423a01ef444.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Shopping_Tutorial</BasePath>
-      <RelativePath>media/products/63f9f301-a0ac-4246-9e1c-d56694b075bb-laptop_1.jpg</RelativePath>
+      <RelativePath>media/products/67eaf37a-0a31-4d99-9cdc-5423a01ef444.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pfouae73sk</Fingerprint>
-      <Integrity>y7YEMm1rWp6BHJr1rjtYARQpmij/JF35wvz+dsNAA0U=</Integrity>
+      <Fingerprint>y0ntjy88el</Fingerprint>
+      <Integrity>0lRyQT8ifNoW6KRHolOFk1AVWtQ/vWsuugeQJ1nEYcQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\63f9f301-a0ac-4246-9e1c-d56694b075bb-laptop_1.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\67eaf37a-0a31-4d99-9cdc-5423a01ef444.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\695f13a3-8bc3-4c76-8e29-67dcfb3b45d4.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/695f13a3-8bc3-4c76-8e29-67dcfb3b45d4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kgqda0llxr</Fingerprint>
+      <Integrity>NKFuqIFRcRkGMXu/qOJa7CKTLt4gCCholVSJhy8fWeE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\695f13a3-8bc3-4c76-8e29-67dcfb3b45d4.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\6cc83143-38c4-4ff4-b27f-97f8318f5347-tl8.webp'))">
       <SourceType>Package</SourceType>
@@ -2178,6 +2466,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\7478f807-eb36-487d-9085-7a4156411917-tl7.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\76ddbcef-b8c6-4dfb-9669-dfd19b1b7c87.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/76ddbcef-b8c6-4dfb-9669-dfd19b1b7c87.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>szj3p520o4</Fingerprint>
+      <Integrity>CGtRTI+9PuvgLX5dWLn3Slt3TQ8xXvagMeZVuZmVkls=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\76ddbcef-b8c6-4dfb-9669-dfd19b1b7c87.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\77ed4f94-9bfc-4737-b833-f95bf0dd2e92-pk23.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -2231,6 +2537,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\7c3d8fb9-5e3a-465a-9fdd-2605d632b246-pk1.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\7c5309fa-4db9-42ac-aad1-587dc833160a.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/7c5309fa-4db9-42ac-aad1-587dc833160a.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>q5ko78n69g</Fingerprint>
+      <Integrity>DvPyiJNQHEIJAPLKoWHbWF0rcvi7KkMMQRMskI3DdUY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\7c5309fa-4db9-42ac-aad1-587dc833160a.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\7c9df3ca-caa3-463e-a5dd-4b725c55f122-pc_4.jpg'))">
       <SourceType>Package</SourceType>
@@ -2303,6 +2627,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\7fb7982e-a37a-45e2-9b6c-b860f1238e83-pk21.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\858c6937-1fc3-4983-a92d-04e87527e8bf.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/858c6937-1fc3-4983-a92d-04e87527e8bf.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6mg5f7sewe</Fingerprint>
+      <Integrity>ovG7iZavnueWzDPUiWOv7bKfZ/p3yHkD2Cw70k3iNi8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\858c6937-1fc3-4983-a92d-04e87527e8bf.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\859d5836-730d-44ec-bd9e-362b43ce691c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/859d5836-730d-44ec-bd9e-362b43ce691c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qsg51hl88b</Fingerprint>
+      <Integrity>SrmUXv2xHIVuNVsVopjhvcj/mZw1VeH8mEkkJDqSAoE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\859d5836-730d-44ec-bd9e-362b43ce691c.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\85b664bc-46ba-4f28-ba31-b22c5b1c0115-laptop_3.jpg'))">
       <SourceType>Package</SourceType>
@@ -2448,6 +2808,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\933f0540-a7d3-4098-9ee9-c1068b0e6829-pk12.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\936c27fe-0e03-4dff-a8ff-fee3e288ecb1-lt1.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/936c27fe-0e03-4dff-a8ff-fee3e288ecb1-lt1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qsg51hl88b</Fingerprint>
+      <Integrity>SrmUXv2xHIVuNVsVopjhvcj/mZw1VeH8mEkkJDqSAoE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\936c27fe-0e03-4dff-a8ff-fee3e288ecb1-lt1.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\95413bff-bf0f-4313-b7b2-445e884012fd-pc_11.PNG'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -2555,6 +2933,60 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\9cf8a7a0-ce5a-417a-a5a7-980bdeab97cf-pk13.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\a1416dd6-674f-41fb-a2a3-ffbd4e161c17.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/a1416dd6-674f-41fb-a2a3-ffbd4e161c17.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jp37e42hjs</Fingerprint>
+      <Integrity>eTPGC3PZj8n1FjPa64I34w0Nk5AHguk3i+l+alieIjA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\a1416dd6-674f-41fb-a2a3-ffbd4e161c17.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\a22bf10d-30f3-4871-854e-f6d5b0737e1a.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/a22bf10d-30f3-4871-854e-f6d5b0737e1a.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nmexpve585</Fingerprint>
+      <Integrity>T32YxlY9QCJDIN1nKpa2eape7cq/pub7FZekZTsPh7M=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\a22bf10d-30f3-4871-854e-f6d5b0737e1a.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\a41df439-e2b2-453d-82d3-962489f79689.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/a41df439-e2b2-453d-82d3-962489f79689.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6rdias5ixz</Fingerprint>
+      <Integrity>3t/fZiEcjOj9aw5TVYg6y1mY/k5d48iTCNH6TuTlFLI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\a41df439-e2b2-453d-82d3-962489f79689.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\a5457530-5b22-4e15-a1c5-0f0532f44edf-banner_13.jpg'))">
       <SourceType>Package</SourceType>
@@ -2664,24 +3096,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\abdef146-ee30-4c13-a2b6-7a40ef8675f2-pc)15.webp'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac1a1aff-5221-445f-b9ae-82602781e810.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Shopping_Tutorial</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Shopping_Tutorial</BasePath>
-      <RelativePath>media/products/ac1a1aff-5221-445f-b9ae-82602781e810.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uxv557b6w6</Fingerprint>
-      <Integrity>Dv593TqFrEnZWl+RTFQ4xczMI8v1bnqraxfAKK/zIHw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac1a1aff-5221-445f-b9ae-82602781e810.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac2603b1-ebb3-464b-bd33-bb509803777d-pk2.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -2700,6 +3114,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac2603b1-ebb3-464b-bd33-bb509803777d-pk2.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac4fd7cc-22f9-4592-ada6-3a4fb4a27c85.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/ac4fd7cc-22f9-4592-ada6-3a4fb4a27c85.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>y2kqwn7u49</Fingerprint>
+      <Integrity>KrRIJPQSpeUL0EbPIWtH4hl71p3fWgx5zzS0jVUepmU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac4fd7cc-22f9-4592-ada6-3a4fb4a27c85.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac97f844-d9f1-4259-b322-7b2f8f9c0ee6-laptop_4.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -2717,6 +3149,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ac97f844-d9f1-4259-b322-7b2f8f9c0ee6-laptop_4.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ae6c8105-0b2c-48ee-91a6-da200cf9d2fe.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/ae6c8105-0b2c-48ee-91a6-da200cf9d2fe.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>szj3p520o4</Fingerprint>
+      <Integrity>CGtRTI+9PuvgLX5dWLn3Slt3TQ8xXvagMeZVuZmVkls=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ae6c8105-0b2c-48ee-91a6-da200cf9d2fe.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\b77083cc-1969-4c73-9488-4cea2c9042f3-pc_15.webp'))">
       <SourceType>Package</SourceType>
@@ -2754,23 +3204,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\b8c1716f-14ee-46ea-a993-963cc00b2f5a-tl3.webp'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ba98de97-ff16-49f1-8c33-78c3d805c6a9-Air_M1_2020.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\b91f3713-3bc5-40d1-970d-7ce65f47dc96.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Shopping_Tutorial</BasePath>
-      <RelativePath>media/products/ba98de97-ff16-49f1-8c33-78c3d805c6a9-Air_M1_2020.jpg</RelativePath>
+      <RelativePath>media/products/b91f3713-3bc5-40d1-970d-7ce65f47dc96.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yh0yllkrdz</Fingerprint>
-      <Integrity>BuBIi6/IPfIr3lbmQKwEOkDsd+bor2K3m0e3GZpAyME=</Integrity>
+      <Fingerprint>dgm9wcbu48</Fingerprint>
+      <Integrity>EyYw8Z1xTabaA3FmdMZDPOeLPUW/QO6hqmHDNH6N8Uo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ba98de97-ff16-49f1-8c33-78c3d805c6a9-Air_M1_2020.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\b91f3713-3bc5-40d1-970d-7ce65f47dc96.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\bcc1e26c-5a19-45bc-8201-e2eedc937759-pk3.webp'))">
       <SourceType>Package</SourceType>
@@ -2808,23 +3258,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\bdae9414-98ad-42fa-93c4-f3e5100b7daf-laptop_6.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\bfe6ba69-0f8f-444d-b4ff-8dd983bb1884-pk31.webp'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c103ce0d-5b8f-4d49-818e-edd16f316940.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Shopping_Tutorial</BasePath>
-      <RelativePath>media/products/bfe6ba69-0f8f-444d-b4ff-8dd983bb1884-pk31.webp</RelativePath>
+      <RelativePath>media/products/c103ce0d-5b8f-4d49-818e-edd16f316940.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6rdias5ixz</Fingerprint>
-      <Integrity>3t/fZiEcjOj9aw5TVYg6y1mY/k5d48iTCNH6TuTlFLI=</Integrity>
+      <Fingerprint>gzwnta62ap</Fingerprint>
+      <Integrity>RHS4Zm3pGTe52mnWjzcmCQLa+Sh2jNrUZeOO3hdKZjg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\bfe6ba69-0f8f-444d-b4ff-8dd983bb1884-pk31.webp'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c103ce0d-5b8f-4d49-818e-edd16f316940.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c18024e0-b96c-48ff-b74a-4ce5d37997b4-pk22.webp'))">
       <SourceType>Package</SourceType>
@@ -2843,6 +3293,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c18024e0-b96c-48ff-b74a-4ce5d37997b4-pk22.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c36c5f53-77ba-438f-a061-050cc28bf820.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/c36c5f53-77ba-438f-a061-050cc28bf820.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6mg5f7sewe</Fingerprint>
+      <Integrity>ovG7iZavnueWzDPUiWOv7bKfZ/p3yHkD2Cw70k3iNi8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c36c5f53-77ba-438f-a061-050cc28bf820.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c3caf354-2f88-429f-aafb-495f2ac68ebf.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/c3caf354-2f88-429f-aafb-495f2ac68ebf.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ydf3w20cxa</Fingerprint>
+      <Integrity>pthP+ow4Z8NiMATe7Dr0+xzS7+8zX4RgZgKCxyazHFk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\c3caf354-2f88-429f-aafb-495f2ac68ebf.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ca0e6788-071c-4e87-a29e-b471cb6eb70d-lk9.webp'))">
       <SourceType>Package</SourceType>
@@ -2898,6 +3384,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ca6a7d1c-90a6-48d2-9e23-9f2b76dea813-pk15.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\cb46d12b-8ccd-4800-827c-551bc135a9e5-dell1.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/cb46d12b-8ccd-4800-827c-551bc135a9e5-dell1.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>doa85l7jh6</Fingerprint>
+      <Integrity>805JKZvKKmfyQ/TUnzRN+QwfbcO26vaOR26+6vL9iCA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\cb46d12b-8ccd-4800-827c-551bc135a9e5-dell1.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ccc22a4f-53fd-4e64-9ee7-04e0a2a98382-laptop_3.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -2952,23 +3456,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\cecaa646-2a62-444c-9f0d-897aede1b547-Air_M3.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\d69c931b-3d27-4ebd-ad7c-b6a3fdfdf365.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\d02e4397-f89f-42e3-9b21-ee1922fa8d67.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Shopping_Tutorial</BasePath>
-      <RelativePath>media/products/d69c931b-3d27-4ebd-ad7c-b6a3fdfdf365.jpg</RelativePath>
+      <RelativePath>media/products/d02e4397-f89f-42e3-9b21-ee1922fa8d67.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jp37e42hjs</Fingerprint>
-      <Integrity>eTPGC3PZj8n1FjPa64I34w0Nk5AHguk3i+l+alieIjA=</Integrity>
+      <Fingerprint>xzzyxsywow</Fingerprint>
+      <Integrity>Q0SPY6UZH/fReu9ERQnsY5ySiShYz9yMbn13O5uhjZ4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\d69c931b-3d27-4ebd-ad7c-b6a3fdfdf365.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\d02e4397-f89f-42e3-9b21-ee1922fa8d67.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\d3778494-30da-4810-9917-20fb2f289193.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/d3778494-30da-4810-9917-20fb2f289193.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>oqffedano3</Fingerprint>
+      <Integrity>kICBGVKCoK6aQUZWh0LLv20sCyreVKaQGNKLzDOyFK4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\d3778494-30da-4810-9917-20fb2f289193.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\da41681a-bc32-44b2-bbb7-70a8e04ba4b5-pc_12.webp'))">
       <SourceType>Package</SourceType>
@@ -2988,6 +3510,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\da41681a-bc32-44b2-bbb7-70a8e04ba4b5-pc_12.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\db18c916-7acc-49bb-9b82-aa9f8c672402.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/db18c916-7acc-49bb-9b82-aa9f8c672402.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ydf3w20cxa</Fingerprint>
+      <Integrity>pthP+ow4Z8NiMATe7Dr0+xzS7+8zX4RgZgKCxyazHFk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\db18c916-7acc-49bb-9b82-aa9f8c672402.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\db9cc7aa-b7b9-49b2-a2c7-857667135047.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/db9cc7aa-b7b9-49b2-a2c7-857667135047.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7yxxwzu6vh</Fingerprint>
+      <Integrity>4emivQngbQKJ46n+gwxyzMkn58a8CIgjgDUzi8byhlI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\db9cc7aa-b7b9-49b2-a2c7-857667135047.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\dbd746bb-8d2b-464a-b1e7-110ae146f151-lt6.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -3005,6 +3563,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\dbd746bb-8d2b-464a-b1e7-110ae146f151-lt6.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\de63fd6f-e478-4c0a-b6d0-38aab595e92f.PNG'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/de63fd6f-e478-4c0a-b6d0-38aab595e92f.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3njnptvpbh</Fingerprint>
+      <Integrity>0b9TsNlaMXDdWjICIpC9rpJpoS8qgaJEmdN0T0GBxmc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\de63fd6f-e478-4c0a-b6d0-38aab595e92f.PNG'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\df147f76-7d12-4612-86c3-930c8ebb1a31-lk7.webp'))">
       <SourceType>Package</SourceType>
@@ -3077,6 +3653,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\e70daa73-6892-493f-b485-0265870e705b-lt5.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ea485292-b584-440b-a5c3-968bb0a042bb.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/ea485292-b584-440b-a5c3-968bb0a042bb.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>48xpw4h259</Fingerprint>
+      <Integrity>jEu5QZzCiT+8LjOAinfGciIb0eWyV6TxfQrsRLIfXbs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ea485292-b584-440b-a5c3-968bb0a042bb.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\eb845e00-8fa2-4a49-be02-feebe32ecc0c-pk25.webp'))">
       <SourceType>Package</SourceType>
@@ -3186,6 +3780,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\efffdb5a-8d7c-4dd3-abf5-942c71ffae31-pk14.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\f2bfc58f-33da-4901-b17c-745dc648dce6.PNG'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/f2bfc58f-33da-4901-b17c-745dc648dce6.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7ag8g9n6kj</Fingerprint>
+      <Integrity>b8if/yLNFt0nTf4FY1C+tCw2V5jrujvJJFfyHyF+0CU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\f2bfc58f-33da-4901-b17c-745dc648dce6.PNG'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\f57024b5-7078-4aea-b2d3-1190f2a714a8.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/f57024b5-7078-4aea-b2d3-1190f2a714a8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>m65v51n72a</Fingerprint>
+      <Integrity>AtumzGO6TTGKoT4/JKXetoIyGrzA9F3nlGvtAgb+CXI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\f57024b5-7078-4aea-b2d3-1190f2a714a8.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\f7bff8ee-9f8e-4a5d-be20-3a3fb10a2909-tl4.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>Shopping_Tutorial</SourceId>
@@ -3203,6 +3833,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\f7bff8ee-9f8e-4a5d-be20-3a3fb10a2909-tl4.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\fa8dd2a0-623a-468f-a641-e210990a7c1b.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/products/fa8dd2a0-623a-468f-a641-e210990a7c1b.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cjmw8ofgjc</Fingerprint>
+      <Integrity>6G1zY/mTd2SgR/8QrsGPTcSPJuzADZpyvA47+9O6Zx8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\fa8dd2a0-623a-468f-a641-e210990a7c1b.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ff73b551-519e-4192-a865-79faa193bc91-laptop_3.jpg'))">
       <SourceType>Package</SourceType>
@@ -3257,6 +3905,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\1559d63d-6c05-4520-80fc-84418fcc0a56-banner_11.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\2911ef99-5d7d-473e-8e90-31934933d9c4-ladixa-khobannerchnh.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/sliders/2911ef99-5d7d-473e-8e90-31934933d9c4-ladixa-khobannerchnh.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5ctdpig8p5</Fingerprint>
+      <Integrity>xRa6zlzngQcnQHkpNCNzRNphdtMTFbAKUd9jAhOUFbI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\2911ef99-5d7d-473e-8e90-31934933d9c4-ladixa-khobannerchnh.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\47f87ffb-22fc-4abf-84a7-7a642c85980e-banner_1.jpg'))">
       <SourceType>Package</SourceType>
@@ -3401,6 +4067,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\e1952a6e-9e8f-466b-8bec-48f94c3aa052-banner_1.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\e419d1ef-af31-433e-b10b-3acb81e488c2-banner-laptop-sinh-vien-scaled.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/sliders/e419d1ef-af31-433e-b10b-3acb81e488c2-banner-laptop-sinh-vien-scaled.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>unr65rar75</Fingerprint>
+      <Integrity>iqKGfzygh08HFtETt70001jRMgJwgjGoCKZpqhmH1ek=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\e419d1ef-af31-433e-b10b-3acb81e488c2-banner-laptop-sinh-vien-scaled.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\f62c7525-517a-45bd-8e24-727094bdd86f-slide5.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopping_Tutorial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopping_Tutorial</BasePath>
+      <RelativePath>media/sliders/f62c7525-517a-45bd-8e24-727094bdd86f-slide5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5q3xcr3fnv</Fingerprint>
+      <Integrity>HVlgHc0a0dhUl4ZXrKPyTpy5qDcAatFCRbEQ5TLe3tM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\sliders\f62c7525-517a-45bd-8e24-727094bdd86f-slide5.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Shopping_Tutorial.zxrdetf01k.bundle.scp.css'))">
       <SourceType>Package</SourceType>

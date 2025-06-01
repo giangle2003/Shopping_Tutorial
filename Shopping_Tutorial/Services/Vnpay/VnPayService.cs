@@ -17,8 +17,8 @@ namespace Shopping_Tutorial.Services.Vnpay
             var timeNow = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, timeZoneById);
             var tick = DateTime.Now.Ticks.ToString();
             var pay = new VnPayLibrary();
-            var urlCallBack = _configuration["PaymentCallBack:ReturnUrl"];
-            //var urlCallBack = _configuration["Vnpay:PaymentBackReturnUrl"];
+            //var urlCallBack = _configuration["PaymentCallBack:ReturnUrl"];
+            var urlCallBack = _configuration["Vnpay:PaymentBackReturnUrl"];
 
 
             pay.AddRequestData("vnp_Version", _configuration["Vnpay:Version"]);

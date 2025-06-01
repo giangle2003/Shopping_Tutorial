@@ -16,8 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 //Kết nối MoMoAPI
 builder.Services.Configure<MomoOptionModel>(builder.Configuration.GetSection("MomoAPI"));
 builder.Services.AddScoped<IMomoService, MomoService>();
-//Kết nối VNPay API
-builder.Services.AddScoped<IVnPayService, VnPayService>();
+
 
 //Kết nối cart
 builder.Services.AddScoped<ICartService, CartService>();
@@ -93,6 +92,10 @@ builder.Services.AddAuthentication(options =>
         }
     };
 });
+
+
+//Kết nối VNPay API
+builder.Services.AddScoped<IVnPayService, VnPayService>();
 
 var app = builder.Build();
 

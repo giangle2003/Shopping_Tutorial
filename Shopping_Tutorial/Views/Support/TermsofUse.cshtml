@@ -1,0 +1,169 @@
+﻿@{
+    ViewData["Title"] = "Điều khoản giao dịch chung";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .container-terms {
+        display: flex;
+        padding: 50px 15px;
+        background-color: #f8f9fa;
+    }
+
+    .toc {
+        width: 250px;
+        margin-right: 30px;
+        position: sticky;
+        top: 80px;
+        height: auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+        .toc h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .toc ul {
+            padding-left: 15px;
+            list-style: none;
+        }
+
+            .toc ul li {
+                margin-bottom: 10px;
+            }
+
+                .toc ul li a {
+                    color: #337ab7;
+                    text-decoration: none;
+                    transition: 0.2s;
+                }
+
+                    .toc ul li a:hover {
+                        text-decoration: underline;
+                    }
+
+    .terms-content {
+        flex: 1;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    }
+
+        .terms-content h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            color: #2c3e50;
+            border-left: 5px solid #337ab7;
+            padding-left: 12px;
+        }
+
+        .terms-content p,
+        .terms-content li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+    @@media (max-width: 768px) {
+        .container-terms {
+            flex-direction: column;
+        }
+
+        .toc {
+            width: 100%;
+            position: relative;
+            top: auto;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<!-- MỤC LỤC + NỘI DUNG -->
+<div class="container-terms">
+    <!-- MỤC LỤC -->
+    <div class="toc">
+        <h4>Mục lục</h4>
+        <ul>
+            <li><a href="#p1">1. Sản phẩm và Dịch vụ</a></li>
+            <li><a href="#p2">2. Đặt hàng và Thanh toán</a></li>
+            <li><a href="#p3">3. Giao hàng</a></li>
+            <li><a href="#p4">4. Chính sách kiểm hàng</a></li>
+            <li><a href="#p5">5. Đổi/Trả & Bảo hành</a></li>
+            <li><a href="#p6">6. Trách nhiệm Cửa hàng</a></li>
+            <li><a href="#p7">7. Trách nhiệm Khách hàng</a></li>
+            <li><a href="#p8">8. Bảo mật Thông tin</a></li>
+        </ul>
+    </div>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <div class="terms-content">
+        <h1>Điều khoản giao dịch chung</h1>
+        <p>
+            Chào mừng quý khách đến với <strong>SMARTTECH</strong>. Cảm ơn Quý khách hàng đã lựa chọn và đặt niềm tin dành cho 1Pro.
+            Khi thực hiện giao dịch với chúng tôi, quý khách đồng ý với các điều khoản và điều kiện dưới đây. Vui lòng đọc kỹ trước khi mua sắm.
+        </p>
+        <h2 id="p1">1. Sản phẩm và Dịch vụ</h2>
+        <p>
+            Chúng tôi cung cấp các sản phẩm và dịch vụ liên quan đến MacBook, iMac, Mac Mini, iPhone, iPad, và các thiết bị công nghệ khác trong hệ sinh thái của APPLE.
+            Các sản phẩm đều có mô tả chi tiết và thông số kỹ thuật trên website hoặc tại cửa hàng.
+        </p>
+        <p>Chúng tôi có quyền thay đổi hoặc cập nhật thông tin mà không cần thông báo trước.</p>
+
+        <h2 id="p2">2. Đặt hàng và Thanh toán</h2>
+        <ul>
+            <li><strong>Đặt hàng:</strong> Tại cửa hàng, qua điện thoại hoặc trên website.</li>
+            <li><strong>Thanh toán:</strong> Tiền mặt, chuyển khoản, ví điện tử.</li>
+            <li><strong>Giá:</strong> Niêm yết, có thể thay đổi theo chính sách.</li>
+        </ul>
+
+        <h2 id="p3">3. Giao hàng</h2>
+        <ul>
+            <li><strong>Phạm vi:</strong> Nội thành và khu vực hỗ trợ.</li>
+            <li><strong>Thời gian:</strong> Giao sớm nhất theo khu vực & hàng hóa.</li>
+            <li><strong>Phí:</strong> Tùy khu vực và trọng lượng.</li>
+        </ul>
+
+        <h2 id="p4">4. Chính sách kiểm hàng</h2>
+        <ul>
+            <li>- Quý khách có quyền kiểm tra khi nhận hàng.</li>
+            <li>- Nếu giao sai sản phẩm, quý khách có thể từ chối nhận.</li>
+            <li>- Đã thanh toán mà giao sai → hoàn tiền hoặc giao lại.</li>
+        </ul>
+        <p>Liên hệ xử lý: <strong>0826 082 788</strong></p>
+        <h2 id="p5">5. Đổi/Trả & Bảo hành</h2>
+        <p><strong>Đổi trả:</strong> Trong 30 ngày nếu lỗi từ nhà sản xuất (đối với máy Like New).</p>
+        <p><strong>Bảo hành:</strong> Theo chính sách từng sản phẩm, áp dụng lỗi kỹ thuật.</p>
+
+
+        <h2 id="p6">6. Trách nhiệm Cửa hàng</h2>
+        <p>Cam kết sản phẩm chính hãng, đổi trả nếu sai mô tả hoặc lỗi kỹ thuật.</p>
+
+        <h2 id="p7">7. Trách nhiệm Khách hàng</h2>
+        <p>Khách hàng cung cấp thông tin chính xác, kiểm tra hàng trước khi nhận và báo lỗi trong 24h.</p>
+
+        <h2 id="p8">8. Bảo mật Thông tin</h2>
+        <p>Chúng tôi cam kết bảo vệ thông tin khách hàng, không chia sẻ với bên thứ ba nếu không có sự đồng ý.</p>
+    </div>
+</div>
+
+<!-- Mượt khi click -->
+<script>
+    $(document).ready(function () {
+        $(".toc a").on('click', function (e) {
+            e.preventDefault();
+            var target = this.hash;
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 80
+            }, 600);
+        });
+    });
+</script>

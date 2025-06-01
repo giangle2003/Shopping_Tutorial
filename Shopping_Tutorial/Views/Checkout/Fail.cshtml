@@ -8,6 +8,8 @@
             <i class="fa fa-times-circle text-danger" style="font-size: 4rem; border: 3px solid red; border-radius: 50%; padding: 15px;"></i>
             <h2 class="text-danger mt-3">❌ Thanh toán thất bại! ❌</h2>
             <p class="text-muted">Đã có lỗi xảy ra khi xử lý thanh toán. Vui lòng thử lại.</p>
+            <p>@TempData["CheckoutError"]</p>
+
             <div class="mt-4">
                 <a asp-controller="Cart" asp-action="Index" class="btn btn-warning btn-lg rounded-pill shadow hover-effect">
                     <i class="fa fa-refresh"></i> Thử lại
